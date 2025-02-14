@@ -2,6 +2,15 @@
 
 .text-base {
   @include font ($size: 14px, $line-height: 20px);
+
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.text-base-card {
+  @include font ($size: 14px, $line-height: 20px);
 }
 
 .text-slider {
@@ -42,12 +51,17 @@
   text-decoration: none;
 }
 
+.text-nav {
+  @include font ($size: 12px, $line-height: 16px, $weight: 600);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .text-footer-nav {
   @include font ($size: 12px, $line-height: 16px);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-
 }
 
 .text-badge {
@@ -61,6 +75,9 @@
   @include font ($size: 20px, $line-height: 32px, $weight: 700);
   margin-right: 20px;
   margin-left: -2px;
+
+  background-position: right 7px center;
+
 }
 
 .text-old-price {
@@ -80,6 +97,12 @@
 .text-add {
   @include font ($size: 18px, $line-height: 32px, $weight: 600);
   margin-bottom: 4px;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
 
 .title-filter {
@@ -96,6 +119,8 @@
 
   @include media-tablet {
     margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -113,6 +138,10 @@
   @include font ($size: 14px, $line-height: 20px, $weight: 600, $color: $color-base);
   margin-bottom: 16px;
   letter-spacing: 0.02em;
+
+  @include media-tablet {
+    margin-bottom: 14px;
+  }
 }
 
 .text-mini {

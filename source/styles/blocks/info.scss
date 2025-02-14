@@ -41,6 +41,16 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include media-tablet {
+    gap: 12px;
+
+    &--address {
+      gap: 14px;
+
+    }
+
+  }
 }
 
 .info__title {

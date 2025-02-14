@@ -7,6 +7,8 @@
 
   @include media-tablet {
     width: 223px;
+    margin-bottom: 21px;
+
   }
 }
 
@@ -34,6 +36,10 @@
 
   height: 4px;
   background-color: $color-base-light;
+
+  @include media-tablet {
+    width: 203px;
+  }
 }
 
 .range__toggle {
@@ -86,6 +92,10 @@
   display: flex;
   gap: 18px;
   align-items: center;
+
+  @include media-tablet {
+    gap: 21px;
+  }
 }
 
 .range__label-price {

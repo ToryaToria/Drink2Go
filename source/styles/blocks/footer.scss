@@ -24,11 +24,16 @@
   // justify-content: space-between;
   margin-bottom: 20px;
 
+  @include media-tablet {
+    margin-bottom: 8px;
+  }
+
   @include media-desktop {
     width: 318px;
     display: flex;
     flex-direction: column;
     justify-content: start;
+
   }
 }
 
@@ -52,7 +57,7 @@
 
   @include media-tablet {
     border-top: none;
-    padding-top: 30px;
+    padding-top: 36px;
   }
 
   @include media-desktop {
@@ -74,6 +79,8 @@
 
   @include media-tablet {
     width: 170px;
+    margin-top: 0;
+  margin-bottom: 0;
   }
 
   @include media-desktop {

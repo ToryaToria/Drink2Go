@@ -57,8 +57,9 @@
   }
 
   @include media-tablet {
-    padding-top: 60px;
+    padding-top: 58px;
     padding-bottom: 0;
+    width: 608px;
   }
 
   @include media-desktop {
@@ -70,10 +71,19 @@
 .slider__badge {
   margin-top: 9px;
   margin-bottom: 5px;
+
+  @include media-tablet {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
 }
 
 .slider__title {
   margin-bottom: 10px;
+
+  @include media-tablet {
+    margin-bottom: 16px;
+  }
 }
 
 .slider__text {
@@ -94,10 +104,15 @@
   position: absolute;
   top: 318px;
   width: 100%;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include media-tablet {
+  width: 80px;
+  height: 640px;
+  }
 }
 
 .slider__arr {

@@ -18,6 +18,8 @@
 
   @include media-tablet {
     width: 223px;
+    margin-bottom: 0;
+
   }
 
   @include media-desktop {
@@ -51,7 +53,8 @@
 .form__wrapp {
   @include media-tablet {
     display: flex;
-    gap: 28px;
+    gap: 30px;
+    margin-bottom: 40px;
   }
 
   @include media-desktop {

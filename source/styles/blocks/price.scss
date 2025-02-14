@@ -10,7 +10,13 @@
     gap: 30px;
     flex-wrap: wrap;
   }
+
+  @include media-tablet {
+    margin-bottom: 70px;
+  }
 }
+
+
 
 .price__card {
   box-sizing: border-box;

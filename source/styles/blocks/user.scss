@@ -19,4 +19,9 @@
   box-sizing: border-box;
   display: block;
   padding: 22px 22px 18px;
+
+  // @include media-tablet {
+  // width: 60px;
+  // height: 80px;
+  // }
 }

@@ -42,6 +42,9 @@
 
 .icon--speed::before {
   background-image: url("../../icons/icon_speed.svg");
+  @include media-tablet {
+  margin-top: 4px;
+  }
 }
 
 .icon--comfort::before {
@@ -54,6 +57,9 @@
 
 .icon--ecolog::before {
   background-image: url("../../icons/icon_ecolog.svg");
+  @include media-tablet {
+  margin-top: 4px;
+  }
 }
 
 .icon-btn::before {

@@ -2,6 +2,10 @@
 
 .text-base {
   @include font ($size: 14px, $line-height: 20px);
+}
+
+.text-slider {
+  @include font ($size: 14px, $line-height: 20px);
 
   @include media-tablet {
     font-size: 20px;
@@ -79,6 +83,10 @@
 .title-price {
   @include font ($size: 18px, $line-height: 32px, $weight: 600);
   margin-bottom: 4px;
+
+  @include media-tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .text-pagin {

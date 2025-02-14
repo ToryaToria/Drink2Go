@@ -1,9 +1,13 @@
 .range {
   position: relative;
 
-  width: 100%;
+  width: 280px;
   height: 20px;
   margin-bottom: 15px;
+
+  @include media-tablet {
+    width: 223px;
+  }
 }
 
 .range::before {
@@ -26,7 +30,7 @@
   transform: translateY(-50%);
 
   left: 0;
-  width: 226px;
+  width: 200px;
 
   height: 4px;
   background-color: $color-base-light;
@@ -74,7 +78,7 @@
 
 .range__filed::-webkit-outer-spin-button,
 .range__filed::-webkit-inner-spin-button {
-  // -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .range__wrapp-field {
@@ -108,6 +112,10 @@
   padding: 8px 10px;
 
   appearance: textfield;
+
+  @include media-tablet {
+    width: 87px;
+  }
 }
 
 .min-price {

@@ -2,6 +2,16 @@
   padding-top: 50px;
   padding-bottom: 44px;
   background-color: $color-bg-grey;
+
+  @include media-tablet {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  @include media-desktop {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .catalog__badge {
@@ -12,6 +22,17 @@
 .catalog__section {
   text-align: center;
   margin-bottom: 20px;
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__wrapp {
+  @include media-desktop {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .catalog__sort-wrapp {
@@ -19,6 +40,16 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+
+  @include media-tablet {
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 30px;
+  }
 }
 
 // .catalog__select:not(:disabled):hover {
@@ -31,8 +62,8 @@
   appearance: none;
 
   box-sizing: border-box;
-  min-width: 165px;
-  max-height: 32px;
+  width: 165px;
+  height: 32px;
   padding: 4px 30px 4px 10px;
 
   color: $color-base;

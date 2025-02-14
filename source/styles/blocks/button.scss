@@ -15,4 +15,10 @@
     display: flex;
     align-items: center;
   }
+
+  &--form {
+    @include media-desktop {
+      flex-grow: 1;
+    }
+  }
 }

@@ -9,6 +9,10 @@
   gap: 20px;
   text-decoration: none;
   margin-right: 88px;
+
+  @include media-tablet {
+    margin-right: 67px;
+  }
 }
 
 .header__logo-descktop {

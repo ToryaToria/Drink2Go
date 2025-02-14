@@ -1,0 +1,35 @@
+// стили для типографики
+
+.text-base {
+  @include font ($size: 14px, $line-height: 20px);
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.title {
+  /* h1 */
+
+  @include font ($size: 36px, $line-height: 48px, $weight: 600);
+  text-align: center;
+
+  @include media-tablet {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.section-title {
+  /* h2 */
+
+  @include font ($size: 25px, $line-height: 30px, $weight: 600);
+
+  @include media-tablet {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  }
+

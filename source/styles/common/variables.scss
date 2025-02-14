@@ -1,1 +1,46 @@
 /* здесь используйте глобальные переменные */
+
+// fonts
+
+$font-base: "Monserrat", "Arial", sans-serif;
+
+
+// colors
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-grey: #bdbdbd;
+$color-grey-light: #e2e2e2;
+
+$color-base: #7859cf;
+$color-base-light: #9070ec;
+$color-base-dark: #593cac;
+
+$color-opasity: rgba(120, 89,207, 0.25);
+
+//  для текста
+$color-text-base: #333333;
+
+//  для фонов
+
+$color-bg-grey: #f8f8f8;
+$color-bg-white: #f3ebe1;
+$color-bg-latte: #eae6fc;
+$color-bg-espresso: #eae6e8;
+
+
+
+//  для форм
+
+
+// WIDTH
+
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+
+
+// * {
+// outline: auto;
+// }

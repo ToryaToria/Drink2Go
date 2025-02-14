@@ -1,10 +1,12 @@
 .page {
-  /*  для стики-футера*/
+
+  /*  для стики-футера */
   height: 100%;
 }
 
 .page__body {
   box-sizing: border-box;
+
   // position: relative;
 
   margin: 0 auto;
@@ -15,7 +17,7 @@
 
   // outline: 1px solid #ff0000;
 
-  /*  для стики-футера*/
+  /*  для стики-футера */
   display: flex;
   min-height: 100%;
   flex-direction: column;

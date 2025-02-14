@@ -46,8 +46,8 @@
 
 
 @mixin icon {
-  display: block;
+  // display: block;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center bottom;
+  background-position: center;
 }

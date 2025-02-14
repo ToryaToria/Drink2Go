@@ -1,5 +1,21 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+// .header {
+// margin-top: 12px;
+// margin-bottom: 12px;
+// }
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  margin-right: 88px;
+}
+
+.header__logo-descktop {
+  display: none;
+
+  @include media-desktop {
+    display: inline;
+    // background-color: bisque;
+  }
 }

@@ -1,0 +1,9 @@
+.social {
+  @include list-reset;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

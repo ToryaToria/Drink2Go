@@ -1,0 +1,19 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // gap: 20px;
+}
+
+.user__txt {
+  display: none;
+
+  @include media-desktop {
+    display: inline;
+    // background-color: bisque;
+  }
+}
+
+.user__link {
+  padding: 22px 20px;
+}

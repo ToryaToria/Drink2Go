@@ -1,0 +1,51 @@
+.catalog {
+  padding-top: 50px;
+  padding-bottom: 44px;
+  background-color: $color-bg-grey;
+}
+
+.catalog__badge {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.catalog__section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.catalog__sort-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+// .catalog__select:not(:disabled):hover {
+//   cursor: pointer;
+//   border: 2px solid #68a2ca;
+// }
+
+.catalog__select {
+  // -webkit-appearance: none;
+  appearance: none;
+
+  box-sizing: border-box;
+  min-width: 165px;
+  max-height: 32px;
+  padding: 4px 30px 4px 10px;
+
+  color: $color-base;
+  background-color: transparent;
+  border: none;
+
+  // @include icon;
+  background-image: url("../../icons/select_arr.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  background-position: right 10px center;
+}
+
+.catalog__price {
+  margin-bottom: 44px;
+}

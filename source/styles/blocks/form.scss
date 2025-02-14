@@ -1,0 +1,29 @@
+.form {
+  margin-bottom: 44px;
+}
+
+.form__field {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 30px;
+
+  outline: auto;
+}
+
+.form__title {
+  margin-bottom: 20px;
+}
+
+.form__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__btn-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}

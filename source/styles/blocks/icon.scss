@@ -1,0 +1,101 @@
+.icon {
+  overflow: visible;
+
+  @include icon;
+
+  &::before {
+    content: "";
+
+    @include icon;
+  }
+
+  // &::after {
+  //   content: "";
+
+  //   @include icon;
+  // }
+}
+
+.icon--basket::before {
+  display: inline-block;
+  padding-right: 8px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../icons/basket.svg");
+}
+
+.icon--user::before {
+  display: inline-block;
+  padding-right: 8px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../icons/user.svg");
+}
+
+.icon--speed::before {
+  background-image: url("../../icons/icon_speed.svg");
+}
+
+.icon--comfort::before {
+  background-image: url("../../icons/icon_comfort.svg");
+}
+
+.icon--features::before {
+  background-image: url("../../icons/icon_features.svg");
+}
+
+.icon--ecolog::before {
+  background-image: url("../../icons/icon_ecolog.svg");
+}
+
+.icon-btn::before {
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  margin: 2px 6px 2px 0;
+  background-image: url("../../icons/basket_add.svg");
+}
+
+.icon-vk {
+  background-image: url("../../icons/VK.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.icon-pint {
+  background-image: url("../../icons/pinterest.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.icon-ok {
+  background-image: url("../../icons/ok.svg");
+  width: 20px;
+  height: 20px;
+}
+
+
+.icon-adress {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-phone {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.icon-adress::before {
+  display: inline-block;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../icons/address.svg");
+}
+
+.icon-phone::before {
+  display: inline-block;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../icons/phone.svg");
+}

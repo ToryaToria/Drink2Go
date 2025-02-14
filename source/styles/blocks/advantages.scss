@@ -1,0 +1,30 @@
+.advantages {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.advantages__badge {
+  margin-bottom: 4px;
+}
+
+.advantages__title {
+  margin-bottom: 36px;
+}
+
+.advantages__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.advantages__item::before {
+  content: "";
+  width: 52px;
+  height: 56px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

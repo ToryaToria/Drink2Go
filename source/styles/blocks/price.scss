@@ -1,0 +1,25 @@
+.price {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price__card {
+  background-color: $color-white;
+  padding: 40px 20px 20px;
+}
+
+.price__img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.price__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}

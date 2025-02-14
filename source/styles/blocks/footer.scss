@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 22px;
+  padding-bottom: 30px;
+}
+
+.footer__wrapp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding-bottom: 20px;
+}
+
+.footer__developed {
+  border-top: 1px solid $color-line;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer__developed-link {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  text-decoration: none;
+}

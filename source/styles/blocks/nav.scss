@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: none;
+
+  @include list-reset;
+
+  @include media-tablet {
+    display: flex;
+    gap: 55px;
+  }
+}
+
+.nav__link {
+  padding: 32px 20px;
+  display: flex;
+
+  &--current {
+    color: $color-base;
+    border-bottom: 2px solid $color-base;
+  }
+}

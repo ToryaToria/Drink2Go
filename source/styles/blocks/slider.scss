@@ -1,0 +1,70 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  @include list-reset;
+}
+
+.slider__item {
+  padding: 20px 20px 60px;
+  text-align: center;
+
+  &--1 {
+    background-color: $color-bg-white;
+  }
+
+  &--2 {
+    background-color: $color-bg-latte;
+  }
+
+  &--3 {
+    background-color: $color-bg-espresso;
+  }
+}
+
+.slider__badge {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.slider__title {
+  margin-bottom: 10px;
+}
+
+.slider__text {
+  margin-bottom: 20px;
+}
+
+.slider__buy {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__btn-wrapp {
+  position: absolute;
+  top: 318px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__arr {
+  display: block;
+  width: 11px;
+  height: 20px;
+
+  @include icon;
+  background-image: url("../../icons/arr-left.svg");
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--r {
+    transform: rotate(180deg);
+  }
+}

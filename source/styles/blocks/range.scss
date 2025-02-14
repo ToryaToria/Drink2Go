@@ -2,8 +2,8 @@
   position: relative;
 
   width: 280px;
-  height: 20px;
-  margin-bottom: 15px;
+  height: 23px;
+  margin-bottom: 25px;
 
   @include media-tablet {
     width: 223px;
@@ -30,7 +30,7 @@
   transform: translateY(-50%);
 
   left: 0;
-  width: 200px;
+  width: 260px;
 
   height: 4px;
   background-color: $color-base-light;
@@ -111,17 +111,12 @@
   height: 40px;
   padding: 8px 10px;
 
+  border: 2px solid $color-base-light;
+  border-radius: 4px;
   appearance: textfield;
+  text-align: center;
 
   @include media-tablet {
     width: 87px;
   }
-}
-
-.min-price {
-  border-radius: 5px 0 0 5px;
-}
-
-.max-price {
-  border-radius: 0 5px 5px 0;
 }

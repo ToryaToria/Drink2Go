@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 22px;
+  padding-top: 20px;
   padding-bottom: 30px;
 
   @include media-tablet {
@@ -21,7 +21,8 @@
 
 .footer__wrapp-inner {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  margin-bottom: 20px;
 
   @include media-desktop {
     width: 318px;
@@ -46,7 +47,7 @@
 
 .footer__developed {
   border-top: 1px solid $color-line;
-  padding-top: 20px;
+  padding-top: 18px;
   text-align: center;
 
   @include media-tablet {
@@ -67,12 +68,26 @@
 }
 
 .footer__logo {
+  margin-right: 38px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
   @include media-tablet {
     width: 170px;
   }
 
   @include media-desktop {
     text-decoration: none;
+  }
+}
+
+.footer__logo-pict {
+  display: block;
+  width: 82px;
+  height: 36px;
+
+  @include media-tablet {
+    width: 170px;
   }
 }
 

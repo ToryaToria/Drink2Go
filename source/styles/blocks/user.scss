@@ -1,6 +1,7 @@
 .user {
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   // gap: 20px;
 }
@@ -15,5 +16,7 @@
 }
 
 .user__link {
-  padding: 22px 20px;
+  box-sizing: border-box;
+  display: block;
+  padding: 22px 22px 18px;
 }

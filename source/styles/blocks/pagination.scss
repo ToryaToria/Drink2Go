@@ -43,13 +43,14 @@
   }
 
   &--text {
-    width: 91px;
     background-repeat: no-repeat;
     background-size: 10px 10px;
     background-position: center;
     background-image: url("../../icons/arr-left.svg");
 
     @include media-tablet {
+      width: 91px;
+
       background-image: none;
       padding-left: 20px;
       padding-right: 20px;

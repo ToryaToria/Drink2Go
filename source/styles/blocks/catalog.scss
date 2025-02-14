@@ -40,6 +40,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  padding-left: 3px;
 
   @include media-tablet {
     justify-content: right;
@@ -64,7 +65,7 @@
   box-sizing: border-box;
   width: 165px;
   height: 32px;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 20px 3px 13px;
 
   color: $color-base;
   background-color: transparent;
@@ -74,7 +75,7 @@
   background-image: url("../../icons/select_arr.svg");
   background-repeat: no-repeat;
   background-size: 10px 6px;
-  background-position: right 10px center;
+  background-position: right 7px center;
 }
 
 .catalog__price {

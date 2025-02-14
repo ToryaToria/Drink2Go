@@ -18,7 +18,7 @@
 
 .icon--basket::before {
   display: inline-block;
-  padding-right: 8px;
+  // padding-right: 8px;
   width: 16px;
   height: 16px;
   background-image: url("../../icons/basket.svg");
@@ -26,10 +26,18 @@
 
 .icon--user::before {
   display: inline-block;
-  padding-right: 8px;
+  // padding-right: 8px;
   width: 16px;
   height: 16px;
   background-image: url("../../icons/user.svg");
+}
+
+.icon--hamburger::before {
+  display: inline-block;
+  // padding-right: 8px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../icons/mob_btn_open.svg");
 }
 
 .icon--speed::before {
@@ -64,8 +72,8 @@
 
 .icon-pint {
   background-image: url("../../icons/pinterest.svg");
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 .icon-ok {
@@ -91,6 +99,8 @@
   width: 13px;
   height: 16px;
   background-image: url("../../icons/address.svg");
+  flex-shrink: 0;
+
 }
 
 .icon-phone::before {
@@ -98,4 +108,5 @@
   width: 13px;
   height: 16px;
   background-image: url("../../icons/phone.svg");
+  flex-shrink: 0;
 }

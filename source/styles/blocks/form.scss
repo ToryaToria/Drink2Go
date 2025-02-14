@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 
   @include media-desktop {
     box-sizing: border-box;
@@ -13,7 +13,7 @@
   border: none;
   margin-bottom: 30px;
 
-  outline: auto;
+  // outline: auto;
   box-sizing: border-box;
 
   @include media-tablet {
@@ -39,7 +39,7 @@
 .form__btn-wrapp {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
 
   @include media-tablet {
     flex-direction: row;

@@ -8,7 +8,10 @@
   @include media-tablet {
     width: 223px;
     margin-bottom: 21px;
-
+  }
+  @include media-desktop {
+    width: 318px;
+    margin-bottom: 23px;
   }
 }
 
@@ -39,6 +42,10 @@
 
   @include media-tablet {
     width: 203px;
+  }
+
+  @include media-desktop {
+    width: 298px;
   }
 }
 
@@ -128,5 +135,9 @@
 
   @include media-tablet {
     width: 87px;
+  }
+  @include media-desktop {
+    width: 134px;
+
   }
 }

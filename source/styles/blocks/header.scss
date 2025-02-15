@@ -17,6 +17,10 @@
   @include media-tablet {
     margin-right: 67px;
   }
+
+  @include media-desktop {
+    margin-right: 0;
+  }
 }
 
 .header__logo-descktop {
@@ -24,6 +28,5 @@
 
   @include media-desktop {
     display: inline;
-    // background-color: bisque;
   }
 }

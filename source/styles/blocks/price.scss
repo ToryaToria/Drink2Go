@@ -9,10 +9,13 @@
     flex-direction: row;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom: 70px;
+
   }
 
-  @include media-tablet {
-    margin-bottom: 70px;
+  @include media-desktop {
+    margin-bottom: 60px;
+
   }
 }
 

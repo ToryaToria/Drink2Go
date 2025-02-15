@@ -42,8 +42,13 @@
 
 .icon--speed::before {
   background-image: url("../../icons/icon_speed.svg");
+
   @include media-tablet {
-  margin-top: 4px;
+    margin-top: 4px;
+  }
+
+  @include media-desktop {
+    margin-top: 0px;
   }
 }
 
@@ -57,8 +62,13 @@
 
 .icon--ecolog::before {
   background-image: url("../../icons/icon_ecolog.svg");
+
   @include media-tablet {
-  margin-top: 4px;
+    margin-top: 4px;
+  }
+
+  @include media-desktop {
+    margin-top: 0px;
   }
 }
 

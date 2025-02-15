@@ -1,9 +1,9 @@
 .pagination {
   margin-top: 40px;
 
-  @include media-desktop {
-    margin-top: 60px;
-  }
+  // @include media-desktop {
+  //   margin-top: 60px;
+  // }
 }
 
 .pagination__list {

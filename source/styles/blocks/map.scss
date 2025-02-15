@@ -20,4 +20,7 @@ object-fit: cover;
 @include media-tablet {
 height: 480px;
 }
+@include media-desktop {
+  height: 540px;
+}
 }

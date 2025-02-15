@@ -2,6 +2,10 @@
   display: flex;
   // justify-content: space-between;
   align-items: center;
+
+  @include media-desktop {
+    gap: 162px;
+  }
 }
 
 .nav__list {
@@ -11,14 +15,17 @@
 
   @include media-tablet {
     display: flex;
-    // gap: 0;
     margin-right: 60px;
+  }
 
+  @include media-desktop {
+    gap: 20px;
+    margin-right: 0;
   }
 }
 
 .nav__link {
-  padding: 32px 20px;
+  padding: 31px 20px;
   display: flex;
 
   &--current {

@@ -7,15 +7,13 @@
 .page__body {
   box-sizing: border-box;
 
-  // position: relative;
+  position: relative;
 
   margin: 0 auto;
   background-color: $color-white;
 
   min-width: $mobile-width;
   max-width: $desktop-width;
-
-  // outline: 1px solid #ff0000;
 
   /*  для стики-футера */
   display: flex;

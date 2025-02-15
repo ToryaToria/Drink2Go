@@ -16,9 +16,9 @@
     <nav class="nav">
       <a href="#" class="header__logo">
         <picture>
-          <source media="(min-width:1440px)" srcset="./images/logo/logo_deskt.svg" width="170" height="36">
-          <source media="(min-width:768px)" srcset="./images/logo/logo_tabl.svg" width="82" height="36">
-          <img src="./images/logo/logo_mob.svg" alt="логотип-картинка" width="32" height="36">
+          <source media="(min-width:1440px)" srcset="./images/logo_deskt.svg" width="170" height="36">
+          <source media="(min-width:768px)" srcset="./images/logo_tabl.svg" width="82" height="36">
+          <img src="./images/logo_mob.svg" alt="логотип-картинка" width="32" height="36">
         </picture>
 
         <p class="header__logo-descktop text-logo">Интернет-магазин <br> кофейных напитков</p>
@@ -64,18 +64,23 @@
 
       <div class="slider">
         <ul class="slider__list">
-          <li class="slider__item slider__item--1 container">
+          <li class="slider__item slider__item--1">
             <div class="slider__wrapp">
-              <img class="slider__img" src="./images/slider/flat_white@1x.png" width="280" height="280"
-                alt="Декаф Флэт Уайт">
 
-              <div>
+              <picture class="slider__img">
+                <source type="image/webp" srcset="/images/flat_white@2x@1x.webp 1x,
+              ./images/flat_white@2x@2x.webp 2x" width="280" height="280">
+
+                <img class="slider__img" src="./images/flat_white@2x@1x.png" srcset="./images/flat_white@2x@2x.png 2x"
+                  width="280" height="280" alt="Декаф Флэт Уайт">
+              </picture>
+
+              <div class="slider__info">
                 <p class="slider__badge text-badge">Новинка!</p>
                 <h2 class="slider__title title-slider">Декаф Флэт Уайт</h2>
                 <p class="slider__text text-slider">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным
                   фермерским
-                  молоком — то, что нужно для
-                  расслабления после тяжёлого рабочего дня</p>
+                  молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
 
                 <div class="slider__buy">
                   <p class="text-old-price">295₽</p>
@@ -86,15 +91,18 @@
                 </div>
               </div>
             </div>
-
-
           </li>
 
-          <li class="slider__item slider__item--2 container">
+          <li class="slider__item slider__item--2">
             <div class="slider__wrapp">
-              <img class="slider__img" src="./images/slider/lavender_img@1x.png" width="280" height="280"
-                alt="Лавандовый Латте">
 
+              <picture class="slider__img">
+                <source type="image/webp" srcset="/images/lavender_img@2x@1x.webp 1x,
+                ./images/lavender_img@2x@2x.webp 2x" width="280" height="280">
+
+                <img class="slider__img" src="./images/lavender_img@2x@1x.png"
+                  srcset="./images/lavender_img@2x@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
+              </picture>
               <div>
                 <p class="slider__badge text-badge">Новинка!</p>
                 <h2 class="slider__title title-slider">Лавандовый Латте</h2>
@@ -113,15 +121,20 @@
                 </div>
               </div>
             </div>
-
-
           </li>
 
-          <li class="slider__item slider__item--3 container">
+          <li class="slider__item slider__item--3">
             <div class="slider__wrapp">
-              <img class="slider__img" src="./images/slider/espresso@1x.png" width="280" height="280"
-                alt="Тройной Эспрессо">
+
+              <picture class="slider__img">
+                <source type="image/webp" srcset="/images/espresso@2x@1x.webp 1x,
+                ./images/espresso@2x@2x.webp 2x" width="280" height="280">
+
+                <img class="slider__img" src="./images/espresso@2x@1x.png" srcset="./images/espresso@2x@2x.png 2x"
+                  width="280" height="280" alt="Тройной Эспрессо">
+              </picture>
               <div>
+
                 <p class="slider__badge text-badge">Новинка!</p>
                 <h2 class="slider__title title-slider">Тройной Эспрессо</h2>
                 <p class="slider__text text-slider">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
@@ -138,10 +151,14 @@
                 </div>
               </div>
             </div>
-
-
           </li>
         </ul>
+
+        <div class="slider__dots-wrapp">
+          <button class="slider__dots" type="button"></button>
+          <button class="slider__dots" type="button"></button>
+          <button class="slider__dots" type="button"></button>
+        </div>
 
         <div class="slider__btn-wrapp">
           <button class="slider__arr" type="button"></button>
@@ -343,7 +360,15 @@
 
           <ul class="price">
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-1@1x.png" alt="Уайт" width="130" height="188">
+
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-1@2x@1x.webp 1x,
+                ./images/coffee-can-1@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-1@2x@1x.png"
+                  srcset="./images/coffee-can-1@2x@2x.png 2x" width="130" height="188" alt="белый">
+              </picture>
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -354,7 +379,14 @@
             </li>
 
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-2@1x.png" alt="Уайт" width="130" height="188">
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-2@2x@1x.webp 1x,
+                ./images/coffee-can-2@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-2@2x@1x.png"
+                  srcset="./images/coffee-can-2@2x@2x.png 2x" width="130" height="188" alt="сереневый">
+              </picture>
+          
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -365,7 +397,14 @@
             </li>
 
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-3@1x.png" alt="Уайт" width="130" height="188">
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-3@2x@1x.webp 1x,
+                ./images/coffee-can-3@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-3@2x@1x.png"
+                  srcset="./images/coffee-can-3@2x@2x.png 2x" width="130" height="188" alt="чёрный">
+              </picture>
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -376,7 +415,14 @@
             </li>
 
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-4@1x.png" alt="Уайт" width="130" height="188">
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-4@2x@1x.webp 1x,
+                ./images/coffee-can-4@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-4@2x@1x.png"
+                  srcset="./images/coffee-can-4@2x@2x.png 2x" width="130" height="188" alt="розовый">
+              </picture>
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -387,7 +433,14 @@
             </li>
 
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-5@1x.png" alt="Уайт" width="130" height="188">
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-5@2x@1x.webp 1x,
+                ./images/coffee-can-5@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-5@2x@1x.png"
+                  srcset="./images/coffee-can-5@2x@2x.png 2x" width="130" height="188" alt="болотный">
+              </picture>
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -398,7 +451,14 @@
             </li>
 
             <li class="price__card">
-              <img class="price__img" src="./images/catalog/coffee-can-6@1x.png" alt="Уайт" width="130" height="188">
+              <picture class="price__img">
+                <source type="image/webp" srcset="/images/coffee-can-6@2x@1x.webp 1x,
+                ./images/coffee-can-6@2x@2x.webp 2x" width="130" height="188">
+
+                <img class="price__img" src="./images/coffee-can-6@2x@1x.png"
+                  srcset="./images/coffee-can-6@2x@2x.png 2x" width="130" height="188" alt="бежевый">
+              </picture>
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -429,7 +489,26 @@
     <section class="map" data-test="map">
       <div class="map__wrapp">
         <h2 class="visually-hidden">карта сокровищ</h2>
-        <img class="map__img" src="./images/map/map_desk@1x.png" alt="map" width="320" height="420">
+
+        <picture class="map__img">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./images/map_desk@1x.webp 1x,
+          ./images/map_desk@2x.webp" width="1440" height="540">
+
+          <source type="image/webp" media="(min-width: 768px)" srcset="./images/map_tabl@1x.webp 1x,
+          ./images/map_tabl@2x.webp 2x" width="768" height="480">
+
+          <source type="image/webp" srcset="./images/map_mob@1x.webp 1x,
+          ./images/map_mob@2x.webp 2x" width="320" height="420">
+
+          <source type="image/jpg" media="(min-width:320px)" srcset="./images/map_desk@1x.jpg 1x,
+      ./images/map_desk@2x.jpg 2x" width="1440" height="540">
+
+          <source type="image/jpg" media="(min-width:768px)" srcset="./img/map/map_tabl@1x.jpg 1x,
+      ./img/hero/hero-tabl-@2x.jpg 2x" width="768" height="480">
+
+          <img class="map__img" src="./images/map_mob@1x.jpg" srcset="./images/map_mob@2x.jpg 2x" alt="карта сокровищ"
+            width="320" height="420">
+        </picture>
       </div>
     </section>
   </main>
@@ -441,7 +520,7 @@
 
           <picture class="footer__logo-pict">
             <source media="(min-width:768px)" srcset="./images/logo/logo_deskt.svg" width="170" height="36">
-            <img src="./images/logo/logo_tabl.svg" alt="лого0тип-картинка" width="82" height="36">
+            <img src="./images/logo/logo_tabl.svg" alt="логотип-картинка" width="82" height="36">
           </picture>
         </a>
 
@@ -468,7 +547,7 @@
         </ul>
       </div>
 
-      <ul class="footer__info info ">
+      <ul class="footer__info info">
         <li class="info__item ">
           <h4 class="title-info">Интернет-магазин</h4>
           <ul class="info__subdirectory">
@@ -523,10 +602,10 @@
     </div>
 
     <div class="footer__developed">
-      <a class="footer__developed-link" href="">
+      <a class="footer__developed-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="text-dev">Разработано в HTML Academy
         </span>
-        <img src="./images/logo/HTML_Academy_Logo.svg" alt="logo HTMLacademy" width="12" height="16">
+        <img src="./images/HTML_Academy_Logo.svg" alt="logo HTMLacademy" width="12" height="16">
       </a>
     </div>
   </footer>

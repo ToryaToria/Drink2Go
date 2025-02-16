@@ -8,13 +8,11 @@
 }
 
 .form__field {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: none;
   margin-bottom: 30px;
-
-  // outline: auto;
-  box-sizing: border-box;
 
   @include media-tablet {
     width: 223px;

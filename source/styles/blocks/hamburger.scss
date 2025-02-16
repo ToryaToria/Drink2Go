@@ -1,25 +1,24 @@
 .hamburger {
   display: block;
-  // display: none;
-  // width: 16px;
-  // height: 16px;
-  padding: 22px 22px 18px;
+  padding: 22px 22px 20px;
+width: 60px;
+height: 60px;
 
   box-sizing: border-box;
-  // position: relative;
   border: none;
   background-color: $color-white;
   cursor: pointer;
 
-
-  // background-image: url("../../icons/mob_btn_open.svg");
+  background-image: url("../../icons/mob_btn_open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 
   @include media-tablet {
     display: none;
   }
 }
 
-// .hamburger--open {
-//  background-color: aquamarine;
-// }
-
+.hamburger--closer {
+   background-image: url("../../icons/mob_btn_close.svg");
+}

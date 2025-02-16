@@ -7,4 +7,4 @@ var onClickBtn = () => {
   console.log("\u043A\u0443");
 };
 btnMob.addEventListener("click", onClickBtn);
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=mobil-menu.js.map

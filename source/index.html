@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <title>drink2go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- <link rel="preload" href="#" type="font/woff2" as="font"> -->
+  <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
-  <!-- <script src="scripts/index.js" defer></script> -->
+  <script src="scripts/index.js" type="module" defer></script>
 </head>
 
 <body class="page__body text-base">
@@ -24,7 +24,7 @@
         <p class="header__logo-descktop text-logo">Интернет-магазин <br> кофейных напитков</p>
       </a>
 
-      <ul class="nav__list">
+      <ul class="nav__list hidden" id="nav__list">
         <li class="nav__item">
           <a href="#" class="nav__link nav__link--current text-nav text-nav">Главная</a>
         </li>
@@ -51,7 +51,7 @@
           <span class="user__txt">Корзина</span>
         </a>
 
-        <button class="hamburger icon icon--hamburger hamburger--open" type="button" aria-label="открыть меню">
+        <button class="hamburger icon- icon--hamburger-" type="button" aria-label="открыть меню">
           <span class="visually-hidden">Меню</span>
         </button>
       </div>
@@ -78,9 +78,8 @@
               <div class="slider__info">
                 <p class="slider__badge text-badge">Новинка!</p>
                 <h2 class="slider__title title-slider">Декаф Флэт Уайт</h2>
-                <p class="slider__text text-slider">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным
-                  фермерским
-                  молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                <p class="slider__text text-slider">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
+                  фермерским&nbsp;молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
 
                 <div class="slider__buy">
                   <p class="text-old-price">295₽</p>

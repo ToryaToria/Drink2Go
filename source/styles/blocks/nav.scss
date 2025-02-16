@@ -1,6 +1,5 @@
 .nav {
   display: flex;
-  // justify-content: space-between;
   align-items: center;
 
   @include media-desktop {
@@ -9,11 +8,18 @@
 }
 
 .nav__list {
-  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: $color-white;
 
   @include list-reset;
 
   @include media-tablet {
+    position: static;
+
     display: flex;
     margin-right: 60px;
   }
@@ -25,11 +31,18 @@
 }
 
 .nav__link {
-  padding: 31px 20px;
-  display: flex;
+  padding: 21px 20px;
+  display: block;
+  border-top: 1px solid $color-line;
+  text-align: center;
 
-  &--current {
-    color: $color-base;
-    border-bottom: 2px solid $color-base;
+  @include media-tablet {
+    padding: 31px 20px;
+    border-top: none;
+
+    &--current {
+      color: $color-base;
+      border-bottom: 2px solid $color-base;
+    }
   }
 }

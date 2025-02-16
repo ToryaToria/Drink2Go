@@ -1,43 +1,31 @@
 .icon {
   overflow: visible;
-
   @include icon;
 
   &::before {
     content: "";
-
     @include icon;
   }
-
-  // &::after {
-  //   content: "";
-
-  //   @include icon;
-  // }
 }
 
-.icon--basket::before {
+.icon--basket {
   display: inline-block;
-  // padding-right: 8px;
-  width: 16px;
-  height: 16px;
   background-image: url("../../icons/basket.svg");
+  background-size: 16px 16px;
+
+  @include media-desktop {
+    background-position: 20px;
+  }
 }
 
-.icon--user::before {
+.icon--user {
   display: inline-block;
-  // padding-right: 8px;
-  width: 16px;
-  height: 16px;
   background-image: url("../../icons/user.svg");
-}
+  background-size: 16px 16px;
 
-.icon--hamburger::before {
-  display: inline-block;
-  // padding-right: 8px;
-  width: 16px;
-  height: 16px;
-  background-image: url("../../icons/mob_btn_open.svg");
+  @include media-desktop {
+    background-position: 20px;
+  }
 }
 
 .icon--speed::before {

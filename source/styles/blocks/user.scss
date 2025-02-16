@@ -20,13 +20,14 @@
 .user__link {
   box-sizing: border-box;
   padding: 22px 22px 18px;
+  width: 60px;
+  height: 60px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include media-desktop {
-    padding:30px 20px;
+    @include media-desktop {
+      width: auto;
+      height: auto;
+      display: flex;
+    padding:30px 20px 30px 36px;
     gap: 8px;
   }
 }

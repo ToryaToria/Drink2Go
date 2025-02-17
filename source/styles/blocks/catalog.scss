@@ -79,9 +79,7 @@
   background-position: right 7px center;
 
   @include media-tablet {
-  padding-left: 10px;
-  background-position: right 10px center;
-
+    padding-left: 10px;
+    background-position: right 10px center;
   }
 }
-

@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
 
-    @include media-desktop {
-      gap: 20px;
-      align-items: stretch;
-    }
+  @include media-desktop {
+    gap: 20px;
+    align-items: stretch;
+  }
 }
 
 .user__txt {
@@ -23,11 +23,20 @@
   width: 60px;
   height: 60px;
 
-    @include media-desktop {
-      width: auto;
-      height: auto;
-      display: flex;
-    padding:30px 20px 30px 36px;
+  &:hover,
+  &:focus {
+    color: $color-base;
+  }
+
+  &:active {
+    background-color: $color-line;
+  }
+
+  @include media-desktop {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 30px 20px 30px 36px;
     gap: 8px;
   }
 }

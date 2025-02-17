@@ -1,4 +1,4 @@
-.range {
+.range__price {
   position: relative;
 
   width: 280px;
@@ -9,6 +9,7 @@
     width: 223px;
     margin-bottom: 21px;
   }
+
   @include media-desktop {
     width: 318px;
     margin-bottom: 23px;
@@ -51,7 +52,11 @@
 
 .range__toggle {
   display: block;
+  // justify-content: center;
+  // align-items: center;
+  padding: 0;
   position: absolute;
+  cursor: pointer;
 
   width: 24px;
   height: 24px;
@@ -68,18 +73,37 @@
     top: -10px;
     right: 0;
   }
-}
 
-.range__toggle:disabled {
-  background-color: #e5e5e5;
-}
+  &::before {
+    margin: 0 auto;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
 
-.range__toggle:not(:disabled):hover {
-  cursor: pointer;
-}
+    // background-color: red;
+  }
 
-.range__toggle:not(:disabled):active {
-  border: 2px solid #82b3d3;
+  &:hover .range__toggle::before,
+  &:focus .range__toggle::before {
+    background-color: $color-base-025;
+  }
+
+  &:active {
+    // background-color: $color-base-025;
+    color: $color-base-dark;
+  }
+
+  &:not(:disabled):active {
+    border: 2px solid #82b3d3;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 /* +++++++++++++ мин и мах  range +++++++++++++++++++ */
@@ -91,7 +115,7 @@
 
 .range__filed::-webkit-outer-spin-button,
 .range__filed::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .range__wrapp-field {
@@ -122,6 +146,12 @@
   text-align: end;
 }
 
+.range__field::-webkit-inner-spin-button,
+.range__field::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+
 .range__field {
   box-sizing: border-box;
   width: 118px;
@@ -130,14 +160,15 @@
 
   border: 2px solid $color-base-light;
   border-radius: 4px;
+
   appearance: textfield;
   text-align: center;
 
   @include media-tablet {
     width: 87px;
   }
+
   @include media-desktop {
     width: 134px;
-
   }
 }

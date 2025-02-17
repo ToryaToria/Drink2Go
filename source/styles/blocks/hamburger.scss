@@ -1,8 +1,8 @@
 .hamburger {
   display: block;
   padding: 22px 22px 20px;
-width: 60px;
-height: 60px;
+  width: 60px;
+  height: 60px;
 
   box-sizing: border-box;
   border: none;
@@ -14,11 +14,15 @@ height: 60px;
   background-position: center;
   background-size: 16px 16px;
 
+  &:active {
+    background-color: $color-line;
+  }
+
   @include media-tablet {
     display: none;
   }
 }
 
 .hamburger--closer {
-   background-image: url("../../icons/mob_btn_close.svg");
+  background-image: url("../../icons/mob_btn_close.svg");
 }

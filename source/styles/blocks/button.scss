@@ -9,6 +9,17 @@
   &--second {
     color: $color-base;
     background-color: $color-white;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $color-white;
+    }
+
+    &:disabled {
+      background-color: $color-grey-light;
+    }
   }
 
   &--img {
@@ -21,5 +32,18 @@
       // flex-grow: 1;
       width: 149px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-base-light;
+  }
+
+  &:active {
+    background-color: $color-base-dark;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
   }
 }

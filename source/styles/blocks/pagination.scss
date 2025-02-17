@@ -1,9 +1,5 @@
 .pagination {
   margin-top: 40px;
-
-  // @include media-desktop {
-  //   margin-top: 60px;
-  // }
 }
 
 .pagination__list {
@@ -26,17 +22,34 @@
   }
 }
 
-.pagination__item {
+.pagination__link {
   box-sizing: border-box;
   width: 40px;
   height: 40px;
   background-color: $color-white;
+  border: none;
   border-radius: 4px;
-  padding: 8px;
+  padding: 4px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:not(.pagination__link--current):hover,
+  &:not(.pagination__link--current):focus {
+    color: $color-white;
+    background-color: $color-base-light;
+  }
+
+  &:not(.pagination__link--current):active {
+    color: $color-white;
+    background-color: $color-base-dark;
+  }
+
+  &:disabled {
+    color: $color-white;
+    background-color: $color-grey-light;
+  }
 
   &--current {
     background-color: transparent;
@@ -52,13 +65,13 @@
       width: 91px;
 
       background-image: none;
-      padding-left: 20px;
-      padding-right: 20px;
+      // padding-left: 20px;
+      // padding-right: 20px;
     }
   }
 }
 
-.pagination__item--text--r {
+.pagination__ilnk--text-r {
   width: 104px;
 
   background-position: center;

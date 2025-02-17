@@ -7,38 +7,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" type="module" defer></script>
 </head>
 
 <body class="page__body text-base">
   <header class="header container" data-test="header">
 
     <nav class="nav">
-      <a href="#" class="header__logo">
+      <a class="header__logo" href="#">
         <picture>
-          <source media="(min-width:1440px)" srcset="./images/logo_deskt.svg" width="170" height="36">
-          <source media="(min-width:768px)" srcset="./images/logo_tabl.svg" width="82" height="36">
+          <source type="image/webp" media="(min-width:1440px)" srcset="./images/logo_deskt.svg" width="170" height="36">
+          <source type="image/webp" media="(min-width:768px)" srcset="./images/logo_tabl.svg" width="82" height="36">
           <img src="./images/logo_mob.svg" alt="логотип-картинка" width="32" height="36">
         </picture>
 
         <p class="header__logo-descktop text-logo">Интернет-магазин <br> кофейных напитков</p>
       </a>
 
-      <ul class="nav__list hidden" id="nav__list">
+      <ul class="nav__list hidden">
         <li class="nav__item">
-          <a href="#" class="nav__link nav__link--current text-nav text-nav">Главная</a>
+          <a class="nav__link nav__link--current text-nav" href="#">Главная</a>
         </li>
 
         <li>
-          <a href="#" class="nav__link text-nav">Каталог</a>
+          <a class="nav__link text-nav" href="#">Каталог</a>
         </li>
 
         <li>
-          <a href="#" class="nav__link text-nav">Доставка</a>
+          <a class="nav__link text-nav" href="#">Доставка</a>
         </li>
 
         <li>
-          <a href="#" class="nav__link text-nav">О нас</a>
+          <a class="nav__link text-nav" href="#">О нас</a>
         </li>
       </ul>
 
@@ -51,7 +50,7 @@
           <span class="user__txt">Корзина</span>
         </a>
 
-        <button class="hamburger icon- icon--hamburger-" type="button" aria-label="открыть меню">
+        <button class="hamburger" type="button" aria-label="открыть меню">
           <span class="visually-hidden">Меню</span>
         </button>
       </div>
@@ -154,14 +153,24 @@
         </ul>
 
         <div class="slider__dots-wrapp">
-          <button class="slider__dots" type="button"></button>
-          <button class="slider__dots" type="button"></button>
-          <button class="slider__dots" type="button"></button>
+          <button class="slider__dots slider__dots--current" type="button">
+            <span class="visually-hidden">слайд 1</span>
+          </button>
+          <button class="slider__dots" type="button">
+            <span class="visually-hidden">слайд 2</span>
+          </button>
+          <button class="slider__dots" type="button">
+            <span class="visually-hidden">слайд 3</span>
+          </button>
         </div>
 
         <div class="slider__btn-wrapp">
-          <button class="slider__arr" type="button"></button>
-          <button class="slider__arr slider__arr--r" type="button"></button>
+          <button class="slider__btn icon icon--slider-btn" type="button">
+            <span class="visually-hidden">Назад</span>
+          </button>
+          <button class="slider__btn icon icon--slider-btn slider__btn--r" type="button">
+            <span class="visually-hidden">Вперед</span>
+          </button>
         </div>
       </div>
     </section>
@@ -209,10 +218,10 @@
       <div class="catalog__wrapp">
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__wrapp">
-            <div class="form__field">
+            <div class="form__field range">
               <h3 class="form__title title-filter">Цена</h3>
 
-              <div class="range">
+              <div class="range__price">
                 <div class="range__bar">
                   <button class="range__toggle range__toggle--min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену</span>
@@ -224,9 +233,7 @@
               </div>
 
               <div class="range__wrapp-field">
-
                 <label class="range__label-price " for="min-price">
-
                   <input class="range__field text-range" type="number" id="min-price" name="min-price" value="0" min="0"
                     placeholder="0">
                 </label>
@@ -234,7 +241,6 @@
                 <div class="range__xz"></div>
 
                 <label class="range__label-price" for="max-price">
-
                   <input class="range__field text-range" type="number" id="max-price" name="max-price" value="900"
                     min="0" placeholder="900">
                 </label>
@@ -265,8 +271,8 @@
 
                 <li>
                   <label class="control" for="vegetable">
-                    <input disabled class="control__input visually-hidden" type="radio" name="milk"
-                      value="only vegetable" id="vegetable">
+                    <input class="control__input visually-hidden" type="radio" name="milk"
+                      value="only vegetable" id="vegetable" disabled>
 
                     <span class="control__mark-radio"></span>
                     <span class="text-label">Только растительное</span>
@@ -279,7 +285,7 @@
                       disabled>
 
                     <span class="control__mark-radio"></span>
-                    <span class="text-label"> Без молока</span>
+                    <span class="text-label">Без молока</span>
                   </label>
                 </li>
               </ul>
@@ -350,10 +356,10 @@
         <div>
           <div class="catalog__sort-wrapp">
             <p class="title-filter">Сортировка:</p>
-            <select class="catalog__select title-filter" name="" id="">
-              <option value=""> по умолчанию </option>
-              <option value=""> по цвету </option>
-              <option value=""> по убыванию </option>
+            <select class="catalog__select title-filter" name="catalog" id="catalog">
+              <option value="default">по умолчанию</option>
+              <option value="color">по цвету</option>
+              <option value="descending">по убыванию</option>
             </select>
           </div>
 
@@ -385,7 +391,7 @@
                 <img class="price__img" src="./images/coffee-can-2@2x@1x.png"
                   srcset="./images/coffee-can-2@2x@2x.png 2x" width="130" height="188" alt="сереневый">
               </picture>
-          
+
               <h3 class="title-price">Декаф Флэт Уайт</h3>
               <p class="text-base-card">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
 
@@ -470,15 +476,29 @@
 
           <div class="pagination">
             <ol class="pagination__list">
-              <li class="pagination__item pagination__item--text"><a class="text-pagin" href="#"><span
-                    class="pagination__txt">Назад</span></a></li>
-              <li class="pagination__item"><a class="text-pagin" href="#">1</a></li>
+              <li>
+                <button class="pagination__link pagination__link--text text-pagin" type="button">
+                  <span class="pagination__txt">Назад</span>
+                </button>
+              </li>
 
-              <li class="pagination__item pagination__item--current"><a class="text-pagin text-pagin--current"
-                  href="#">2</a></li>
-              <li class="pagination__item"><a class="text-pagin" href="#">3</a></li>
-              <li class="pagination__item pagination__item--text  pagination__item--text--r"><a class="text-pagin"
-                  href="#"><span class="pagination__txt">Вперёд</span></a></li>
+              <li>
+                <button class="pagination__link text-pagin" type="button">1</button>
+              </li>
+
+              <li>
+                <button class="pagination__link pagination__link--current text-pagin text-pagin--current" type="button">2</button>
+              </li>
+
+              <li>
+                <button class="pagination__link text-pagin" type="button">3</button>
+              </li>
+
+              <li>
+                <button class="pagination__link pagination__link--text pagination__link--text-r text-pagin" type="button">
+                  <span class="pagination__txt">Вперёд</span>
+                </button>
+              </li>
             </ol>
           </div>
         </div>
@@ -491,7 +511,7 @@
 
         <picture class="map__img">
           <source type="image/webp" media="(min-width: 1440px)" srcset="./images/map_desk@1x.webp 1x,
-          ./images/map_desk@2x.webp" width="1440" height="540">
+          ./images/map_desk@2x.webp 2x" width="1440" height="540">
 
           <source type="image/webp" media="(min-width: 768px)" srcset="./images/map_tabl@1x.webp 1x,
           ./images/map_tabl@2x.webp 2x" width="768" height="480">
@@ -518,8 +538,8 @@
         <a class="footer__logo" href="#">
 
           <picture class="footer__logo-pict">
-            <source media="(min-width:768px)" srcset="./images/logo/logo_deskt.svg" width="170" height="36">
-            <img src="./images/logo/logo_tabl.svg" alt="логотип-картинка" width="82" height="36">
+            <source type="image/webp" media="(min-width:768px)" srcset="./images/logo_deskt.svg" width="170" height="36">
+            <img src="./images/logo_tabl.svg" alt="логотип-картинка" width="82" height="36">
           </picture>
         </a>
 
@@ -547,23 +567,23 @@
       </div>
 
       <ul class="footer__info info">
-        <li class="info__item ">
+        <li class="info__item">
           <h4 class="title-info">Интернет-магазин</h4>
           <ul class="info__subdirectory">
             <li>
-              <a class="text-footer-nav" href="#">Каталог</a>
+              <a class="info__link text-footer-nav" href="#">Каталог</a>
             </li>
 
             <li>
-              <a class="text-footer-nav" href="#">Доставка</a>
+              <a class="info__link text-footer-nav" href="#">Доставка</a>
             </li>
 
             <li>
-              <a class="text-footer-nav" href="#">Способы оплаты</a>
+              <a class="info__link text-footer-nav" href="#">Способы оплаты</a>
             </li>
 
             <li>
-              <a class="text-footer-nav" href="#">О нас</a>
+              <a class="info__link text-footer-nav" href="#">О нас</a>
             </li>
           </ul>
         </li>
@@ -572,15 +592,15 @@
           <h4 class="title-info">Медиа</h4>
           <ul class="info__subdirectory">
             <li>
-              <a class="text-footer-nav" href="#">Блог</a>
+              <a class="info__link text-footer-nav" href="#">Блог</a>
             </li>
 
             <li>
-              <a class="text-footer-nav" href="#">Информация для СМИ</a>
+              <a class="info__link text-footer-nav" href="#">Информация для СМИ</a>
             </li>
 
             <li>
-              <a class="text-footer-nav" href="#">Правовая информация</a>
+              <a class="info__link text-footer-nav" href="#">Правовая информация</a>
             </li>
           </ul>
         </li>
@@ -608,6 +628,7 @@
       </a>
     </div>
   </footer>
+  <script src="scripts/index.js" type="module"></script>
 
 </body>
 

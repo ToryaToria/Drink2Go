@@ -2,10 +2,43 @@
   @include list-reset;
 }
 
-.social__item {
+// .social__item {
+
+// }
+
+.social__link {
+  border-radius: 4px;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-line;
+
+    &::before {
+      background-color: $color-base;
+    }
+  }
+
+  &:active {
+    background-color: $color-base-025;
+  }
 }
+
+// img {
+//   mask-image: url("shape.png");
+//   mask-repeat: no-repeat;
+//   mask-position: center;
+//   mask-size: 60%;
+// }
+
+// .social__link::before {
+//   transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+// }
+
+// .social__link:hover::before {
+//   background-color: $color-bg-base;
+// }

@@ -49,14 +49,23 @@
 
     &--address {
       gap: 14px;
-
     }
-
   }
 }
 
 .info__title {
   margin-bottom: 22px;
+}
+
+.info__link {
+  &:hover,
+  &:focus {
+    color: $color-base-light;
+  }
+
+  &:active {
+    color: $color-base-dark;
+  }
 }
 
 // .info__adress {

@@ -6,25 +6,26 @@
   gap: 20px;
 
   @include media-tablet {
-    flex-direction: row;
+    // flex-direction: row;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin-bottom: 70px;
-
   }
 
   @include media-desktop {
     margin-bottom: 60px;
-
   }
 }
-
-
 
 .price__card {
   box-sizing: border-box;
   background-color: $color-white;
   padding: 40px 20px 20px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
 
   @include media-tablet {
     width: 349px;

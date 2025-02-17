@@ -33,7 +33,6 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-
   }
 }
 
@@ -60,7 +59,7 @@
     padding-top: 36px;
   }
 
-   @include media-desktop {
+  @include media-desktop {
     padding-top: 25px;
   }
 }
@@ -70,6 +69,21 @@
   gap: 4px;
   justify-content: center;
   text-decoration: none;
+
+  &:hover span,
+  &:focus span {
+    // background-color: $color-line;
+    color: $color-base;
+
+    // &::before {
+    //   background-color: $color-base;
+    // }
+  }
+
+  &:active span {
+    // background-color: $color-base-025;
+    color: $color-base-dark;
+  }
 }
 
 .footer__logo {
@@ -80,7 +94,7 @@
   @include media-tablet {
     width: 170px;
     margin-top: 0;
-  margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   @include media-desktop {

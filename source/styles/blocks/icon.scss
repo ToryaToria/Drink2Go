@@ -1,9 +1,11 @@
 .icon {
   overflow: visible;
+
   @include icon;
 
   &::before {
     content: "";
+
     @include icon;
   }
 }
@@ -28,6 +30,13 @@
   }
 }
 
+.icon--slider-btn::before {
+  display: block;
+  width: 11px;
+  height: 20px;
+  background-image: url("../../icons/arr-left.svg");
+}
+
 .icon--speed::before {
   background-image: url("../../icons/icon_speed.svg");
 
@@ -36,7 +45,7 @@
   }
 
   @include media-desktop {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -56,7 +65,7 @@
   }
 
   @include media-desktop {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -68,24 +77,42 @@
   background-image: url("../../icons/basket_add.svg");
 }
 
-.icon-vk {
-  background-image: url("../../icons/VK.svg");
+
+.icon-vk::before {
+  background-color: $color-grey;
+  display: block;
   width: 20px;
   height: 20px;
+
+  mask-image: url("../../icons/VK.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
 }
 
-.icon-pint {
-  background-image: url("../../icons/pinterest.svg");
+.icon-pint::before {
+  display: block;
   width: 22px;
   height: 22px;
+  background-color: $color-grey;
+
+  mask-image: url("../../icons/pinterest.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
 }
 
-.icon-ok {
-  background-image: url("../../icons/ok.svg");
+.icon-ok::before {
+  display: block;
   width: 20px;
   height: 20px;
-}
+  background-color: $color-grey;
 
+  mask-image: url("../../icons/ok.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
 
 .icon-adress {
   display: flex;
@@ -104,7 +131,6 @@
   height: 16px;
   background-image: url("../../icons/address.svg");
   flex-shrink: 0;
-
 }
 
 .icon-phone::before {

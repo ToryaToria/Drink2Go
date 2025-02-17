@@ -12,10 +12,9 @@
 }
 
 .hidden {
+  display: none;
 
-display: none;  
-
-@include media-tablet {
-display: block;
-}
+  @include media-tablet {
+    display: block;
+  }
 }

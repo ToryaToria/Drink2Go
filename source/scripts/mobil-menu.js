@@ -8,5 +8,4 @@ const onClickBtn = () => {
   console.log('ку')
 }
 
-
 btnMob.addEventListener('click', onClickBtn);

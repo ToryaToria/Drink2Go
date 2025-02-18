@@ -10,7 +10,7 @@ noUiSlider.create(sliderElement, {
   start: [0, 900],
   range: {
     min: 0,
-    max: 1000,
+    max: 1060,
   },
   connect: [false, true, false],
 

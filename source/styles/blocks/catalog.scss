@@ -1,5 +1,5 @@
 .catalog {
-  padding-top: 50px;
+  padding-top: 49px;
   padding-bottom: 44px;
   background-color: $color-bg-grey;
 
@@ -15,7 +15,7 @@
 }
 
 .catalog__badge {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -81,22 +81,22 @@
     background-color: $color-line;
   }
 
-  &:active .catalog__icon:has(.catalog__select) {
-    background-color: red;
-  }
+  // &:active .catalog__icon:has(.catalog__select) {
+  //   background-color: red;
+  // }
 }
 
-.catalog__icon:has(.catalog__select)::before {
-  // transform: rotate(180deg);
-  background-color: aquamarine;
-} 
+// .catalog__icon:has(.catalog__select)::before {
+//   // transform: rotate(180deg);
+//   background-color: aquamarine;
+// }
 
 .catalog__icon {
   position: relative;
 }
 
 .catalog__icon::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 6px;
   position: absolute;

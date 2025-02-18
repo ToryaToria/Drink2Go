@@ -47,11 +47,10 @@
 
   &--text-r {
     transform: rotate(180deg);
-  
+
     @include media-tablet {
       width: 104px;
       transform: rotate(0deg);
-
     }
   }
 
@@ -77,4 +76,4 @@
     color: $color-white;
     background-color: $color-grey-light;
   }
-  }
+}

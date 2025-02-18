@@ -12,7 +12,6 @@
   margin: 0;
   padding: 0;
   border: none;
-  margin-bottom: 30px;
 
   @include media-tablet {
     width: 223px;
@@ -48,9 +47,13 @@
 }
 
 .form__wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+
   @include media-tablet {
-    display: flex;
-    gap: 30px;
+    flex-direction: row;
     margin-bottom: 40px;
   }
 

@@ -44,9 +44,18 @@
   padding-bottom: 60px;
   text-align: center;
 
+  @include media-tablet {
+    padding: 60px;
+    padding-bottom: 0;
+  }
+
+  @include media-desktop {
+    width: auto;
+    padding: 30px 80px 84px 105px;
+  }
+
   &--1 {
     background: $color-bg-white;
-    // display: none;
 
     @include media-tablet {
       background: linear-gradient($color-bg-white 640px, $color-white 640px);
@@ -82,22 +91,9 @@
       background: $color-bg-espresso;
     }
   }
-
-  @include media-tablet {
-    padding: 60px;
-  }
-
-  @include media-desktop {
-    width: auto;
-    padding: 30px 80px 84px 105px;
-  }
 }
 
 .slider__info {
-  @include media-tablet {
-  // padding-left: 80px;
-  // padding-right: 80px;
-  }
   @include media-desktop {
     margin-top: -12px;
   }
@@ -156,11 +152,6 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
 
   display: flex;
   justify-content: center;
@@ -173,7 +164,7 @@
 
   &:hover,
   &:focus {
-    background: linear-gradient(to right, #ffffff, transparent);
+    background: linear-gradient(to right, $color-white, transparent);
   }
 
   &:active {

@@ -45,7 +45,7 @@ export function lintBem () {
 }
 
 export function processStyles () {
-  return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: true })
+  return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -69,7 +69,7 @@ export function processStyles () {
         },
       })
     ]))
-    .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: true }))
+    .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());
 }
 

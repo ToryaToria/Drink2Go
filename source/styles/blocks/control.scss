@@ -22,13 +22,13 @@
     display: none;
     width: 16px;
     height: 16px;
-    background-color: blue;
+    // background-color: blue;
     border-radius: 50%;
   }
 }
 
-.control__input[type="radio"]:not(:disabled):hover+.control__mark-radio,
-.control__input[type="radio"]:not(:disabled):focus+.control__mark-radio {
+.control__input[type="radio"]:not(:disabled):hover + .control__mark-radio,
+.control__input[type="radio"]:not(:disabled):focus + .control__mark-radio {
   border-color: $color-base-light;
 
   &::before {
@@ -37,7 +37,7 @@
   }
 }
 
-.control__input[type="radio"]:not(:disabled):checked+.control__mark-radio {
+.control__input[type="radio"]:not(:disabled):checked + .control__mark-radio {
   border-color: $color-base;
 
   &::before {
@@ -46,12 +46,12 @@
   }
 }
 
-.control__input[type="radio"]:disabled+.control__mark-radio {
+.control__input[type="radio"]:disabled + .control__mark-radio {
   border-color: $color-grey-light;
   cursor: no-drop;
 }
 
-.control__input[type="radio"]:disabled:checked+.control__mark-radio {
+.control__input[type="radio"]:disabled:checked + .control__mark-radio {
   border-color: $color-grey-light;
   cursor: no-drop;
 
@@ -63,7 +63,7 @@
   }
 }
 
-.control__input[type="radio"]:disabled~.text-label {
+.control__input[type="radio"]:disabled ~ .text-label {
   color: $color-grey-light;
   cursor: no-drop;
 }
@@ -93,22 +93,22 @@
   }
 }
 
-.control__input[type="checkbox"]:not(:disabled):hover+.control__mark-check,
-.control__input[type="checkbox"]:not(:disabled):focus+.control__mark-check {
+.control__input[type="checkbox"]:not(:disabled):hover + .control__mark-check,
+.control__input[type="checkbox"]:not(:disabled):focus + .control__mark-check {
   border-color: $color-base-light;
   background-color: $color-base-025;
 }
 
-.control__input[type="checkbox"]:checked~.control__mark-check {
+.control__input[type="checkbox"]:checked ~ .control__mark-check {
   background-color: $color-base;
 }
 
-.control__input[type="checkbox"]:disabled~.control__mark-check {
+.control__input[type="checkbox"]:disabled ~ .control__mark-check {
   background-color: $color-grey-light;
   cursor: no-drop;
 }
 
-.control__input[type="checkbox"]:disabled:checked~.control__mark-check {
+.control__input[type="checkbox"]:disabled:checked ~ .control__mark-check {
   background-color: $color-grey-light;
   cursor: no-drop;
 
@@ -119,12 +119,12 @@
 }
 
 
-.control__input[type="checkbox"]:disabled~.text-label {
+.control__input[type="checkbox"]:disabled ~ .text-label {
   color: $color-grey-light;
   cursor: no-drop;
 }
 
-.control__input[type="checkbox"]:checked~.control__mark-check::before {
+.control__input[type="checkbox"]:checked ~ .control__mark-check::before {
   content: "";
   margin: 0 0 0 20px;
 }

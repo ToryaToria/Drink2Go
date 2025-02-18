@@ -1,10 +1,1 @@
-// source/scripts/mobil-menu.js
-var btnMob = document.querySelector(".hamburger");
-var menuMob = document.querySelector("#nav__list");
-var onClickBtn = () => {
-  btnMob.classList.toggle("hamburger--closer");
-  menuMob.classList.toggle("hidden");
-  console.log("\u043A\u0443");
-};
-btnMob.addEventListener("click", onClickBtn);
-//# sourceMappingURL=index.js.map
+var o=document.querySelector(".hamburger"),r=document.querySelector("#nav__list"),c=()=>{o.classList.toggle("hamburger--closer"),r.classList.toggle("hidden"),console.log("\u043A\u0443")};o.addEventListener("click",c);var n=document.querySelector(".range__ui-slider"),l=[document.getElementById("min-price"),document.getElementById("max-price")],m=document.querySelector("#min-price"),i=document.querySelector("#max-price");noUiSlider.create(n,{start:[0,900],range:{min:0,max:1e3},connect:[!1,!0,!1],format:{from:e=>Number(e).toFixed(0),to:e=>Number(e).toFixed(0)}});n.noUiSlider.on("update",function(e,t){l[t].value=e[t]});

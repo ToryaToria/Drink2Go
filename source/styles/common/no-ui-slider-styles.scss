@@ -1,0 +1,61 @@
+.noUi-target {
+  border: none;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+
+  background-color: $color-grey-light;
+  
+  // outline: auto;
+
+}
+
+.noUi-base {
+  overflow: visible;
+}
+
+.noUi-horizontal {
+  height: 2px;
+  overflow: visible;
+
+}
+.noUi-connects {
+  position: static;
+  border-radius: 0;
+  // background-color: aqua;
+  // outline: 1px solid teal;
+  overflow: visible;
+
+}
+
+.noUi-connect {
+  box-sizing: border-box;
+  height: 4px;
+  background-color: $color-base-light;
+  top: -1px;
+
+  // outline: 1px solid rgb(181, 47, 185);
+
+
+}
+
+.noUi-horizontal .noUi-handle {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding: 0;
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid $color-base-light;
+}
+
+.noUi-handle:before,
+ .noUi-handle:after {
+  display: none;
+ }

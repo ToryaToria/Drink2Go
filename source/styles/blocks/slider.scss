@@ -147,19 +147,17 @@
   }
 }
 
-.slider__btn-wrapp- {
-  // сделать для каждой кнопки по отдельности
+.slider__btn {
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
 
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-}
 
-.slider__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,12 +176,14 @@
     background: linear-gradient(to right, $color-base-025, transparent);
   }
 
-  &:disabled {
+  &:disabled::before {
     background-color: $color-grey;
   }
 
   &--r {
     transform: rotate(180deg);
+    left: auto;
+    right: 0;
   }
 
   @include media-tablet {

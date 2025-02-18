@@ -72,18 +72,25 @@
 
   &:hover span,
   &:focus span {
-    // background-color: $color-line;
     color: $color-base;
+  }
 
-    // &::before {
-    //   background-color: $color-base;
-    // }
+  &:hover .footer__developed-img,
+  &:focus .footer__developed-img {
+    fill: $color-base;
   }
 
   &:active span {
-    // background-color: $color-base-025;
     color: $color-base-dark;
   }
+
+  &:active .footer__developed-img {
+    fill: $color-base-dark;
+  }
+}
+
+.footer__developed-img {
+  fill: $color-grey;
 }
 
 .footer__logo {

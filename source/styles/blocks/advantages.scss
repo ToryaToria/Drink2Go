@@ -38,7 +38,7 @@
   @include media-tablet {
     gap: 50px 30px;
     // flex-direction: row;
-    flex-flow: row, wrap;
+    flex-flow: row wrap;
   }
 
   @include media-desktop {

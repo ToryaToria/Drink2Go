@@ -10,31 +10,48 @@
   }
 }
 
-.icon--basket {
+.icon--basket::before {
   display: inline-block;
-  background-image: url("../../icons/basket.svg");
-  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-black;
 
-  @include media-desktop {
-    background-position: 20px;
-  }
+  mask-image: url("../../icons/basket.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+  // @include media-desktop {
+  //   padding-right: 5px;
+  //   }
 }
 
-.icon--user {
+.icon--user::before {
   display: inline-block;
-  background-image: url("../../icons/user.svg");
-  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-black;
 
-  @include media-desktop {
-    background-position: 20px;
-  }
+  mask-image: url("../../icons/user.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+
+  // @include media-desktop {
+  // padding-right: 5px;
+  // }
 }
 
 .icon--slider-btn::before {
   display: block;
   width: 11px;
   height: 20px;
-  background-image: url("../../icons/arr-left.svg");
+
+  background-color: $color-base;
+
+  mask-image: url("../../icons/arr-left.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
 }
 
 .icon--speed::before {
@@ -139,4 +156,23 @@
   height: 16px;
   background-image: url("../../icons/phone.svg");
   flex-shrink: 0;
+}
+
+.icon--pagination::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: $color-base;
+
+  mask-image: url("../../icons/arr-left.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+
+  @include media-tablet {
+    display: none;
+
+    // &-r::before {
+    // }
+  }
 }

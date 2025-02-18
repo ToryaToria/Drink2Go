@@ -35,13 +35,40 @@
   align-items: center;
   justify-content: center;
 
-  &:not(.pagination__link--current):hover,
-  &:not(.pagination__link--current):focus {
+  &--current {
+    background-color: transparent;
+  }
+
+  &--text {
+    @include media-tablet {
+      width: 91px;
+    }
+  }
+
+  &--text-r {
+    transform: rotate(180deg);
+  
+    @include media-tablet {
+      width: 104px;
+      transform: rotate(0deg);
+
+    }
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before,
+  &:disabled::before {
+    background-color: $color-white;
+  }
+
+  &:not(.pagination__link--current):not(:disabled):hover,
+  &:not(.pagination__link--current):not(:disabled):focus {
     color: $color-white;
     background-color: $color-base-light;
   }
 
-  &:not(.pagination__link--current):active {
+  &:not(.pagination__link--current):not(:disabled):active {
     color: $color-white;
     background-color: $color-base-dark;
   }
@@ -50,34 +77,4 @@
     color: $color-white;
     background-color: $color-grey-light;
   }
-
-  &--current {
-    background-color: transparent;
   }
-
-  &--text {
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: center;
-    background-image: url("../../icons/arr-left.svg");
-
-    @include media-tablet {
-      width: 91px;
-
-      background-image: none;
-      // padding-left: 20px;
-      // padding-right: 20px;
-    }
-  }
-}
-
-.pagination__ilnk--text-r {
-  width: 104px;
-
-  background-position: center;
-  background-image: url("../../icons/arr-right.svg");
-
-  @include media-tablet {
-    background-image: none;
-  }
-}

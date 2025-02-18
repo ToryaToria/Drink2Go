@@ -217,7 +217,7 @@
 
               <div class="range__price">
                 <div class="range__bar">
-                  <button class="range__toggle range__toggle--min" type="button">
+                  <button class="range__toggle range__toggle--min" type="button" disabled="disabled">
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
                   <button class="range__toggle range__toggle--max" type="button">
@@ -228,7 +228,7 @@
 
               <div class="range__wrapp-field">
                 <label class="range__label-price" for="min-price">
-                  <input class="range__field text-range" type="number" id="min-price" name="min-price" value="0" min="0" placeholder="0">
+                  <input class="range__field text-range" type="number" id="min-price" name="min-price" min="0" placeholder="0">
                 </label>
 
                 <div class="range__xz"></div>
@@ -244,7 +244,7 @@
               <ul class="form__list">
                 <li>
                   <label class="control" for="nomatter">
-                    <input class="control__input visually-hidden" type="radio" name="milk" value="no matter" id="nomatter" checked="checked">
+                    <input class="control__input visually-hidden" type="radio" name="milk" value="no matter" id="nomatter">
                     <span class="control__mark-radio"></span>
                     <span class="text-label">Неважно</span>
                   </label>
@@ -252,7 +252,7 @@
 
                 <li>
                   <label class="control" for="animal">
-                    <input class="control__input visually-hidden" type="radio" name="milk" value="only an animal" id="animal">
+                    <input class="control__input visually-hidden" type="radio" name="milk" value="only an animal" id="animal" checked="checked" disabled="disabled">
 
                     <span class="control__mark-radio"></span>
                     <span class="text-label">Только животное</span>
@@ -261,7 +261,7 @@
 
                 <li>
                   <label class="control" for="vegetable">
-                    <input class="control__input visually-hidden" type="radio" name="milk" value="only vegetable" id="vegetable" disabled="disabled">
+                    <input class="control__input visually-hidden" type="radio" name="milk" value="only vegetable" id="vegetable">
 
                     <span class="control__mark-radio"></span>
                     <span class="text-label">Только растительное</span>
@@ -311,7 +311,7 @@
 
                 <li>
                   <label class="control" for="kost">
-                    <input class="control__input visually-hidden" type="checkbox" name="kost" id="kost" value="Costa Rica">
+                    <input class="control__input visually-hidden" type="checkbox" name="kost" id="kost" value="Costa Rica" disabled="disabled" checked="checked">
 
                     <span class="control__mark-check"></span>
                     <span class="text-label">Коста-Рика</span>
@@ -340,11 +340,13 @@
         <div>
           <div class="catalog__sort-wrapp">
             <p class="title-filter">Сортировка:</p>
-            <select class="catalog__select title-filter" name="catalog" id="catalog">
-              <option value="default">по умолчанию</option>
-              <option value="color">по цвету</option>
-              <option value="descending">по убыванию</option>
-            </select>
+            <div class="catalog__icon icon icon--select">
+              <select class="catalog__select title-filter" name="catalog" id="catalog">
+                <option value="default">по умолчанию</option>
+                <option value="color">по цвету</option>
+                <option value="descending">по убыванию</option>
+              </select>
+            </div>
           </div>
 
           <ul class="price">

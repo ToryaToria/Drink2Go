@@ -16,7 +16,9 @@
   }
 }
 
-.range::before {
+
+
+.range__price::before {
   content: "";
   position: absolute;
 
@@ -52,14 +54,14 @@
 
 .range__toggle {
   display: block;
-  // justify-content: center;
-  // align-items: center;
+  width: 24px;
+  height: 24px;
+
   padding: 0;
   position: absolute;
   cursor: pointer;
 
-  width: 24px;
-  height: 24px;
+
   border-radius: 50%;
   background-color: #ffffff;
   border: 2px solid $color-base-light;
@@ -84,26 +86,30 @@
     border-radius: 50%;
     border: none;
 
-    // background-color: red;
+    background-color: $color-white;
   }
+}
 
-  &:hover .range__toggle::before,
-  &:focus .range__toggle::before {
+
+.range__toggle:not(:disabled):hover,
+.range__toggle:not(:disabled):focus {
+
+  &::before {
     background-color: $color-base-025;
   }
+}
 
-  &:active {
-    // background-color: $color-base-025;
-    color: $color-base-dark;
-  }
+.range__toggle:not(:disabled):active {
 
-  &:not(:disabled):active {
-    border: 2px solid #82b3d3;
-  }
+  background-color: green;
 
-  &:disabled {
-    background-color: #e5e5e5;
+  &::before {
+    background-color: $color-base-025; // НЕ РАБОТАЕТ!!!!
   }
+}
+
+.range__toggle:disabled {
+  border-color: #e5e5e5;
 }
 
 /* +++++++++++++ мин и мах  range +++++++++++++++++++ */
@@ -170,5 +176,20 @@
 
   @include media-desktop {
     width: 134px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-base-dark;
+  }
+
+  &:disabled {
+    border-color: $color-grey-light;
+    color: $color-grey;
+  }
+
+  &::placeholder{
+    color: $color-grey;
+    opacity: 1;
   }
 }

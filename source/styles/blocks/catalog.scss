@@ -60,8 +60,8 @@
 // }
 
 .catalog__select {
-  // -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
 
   box-sizing: border-box;
   width: 165px;
@@ -71,15 +71,39 @@
   color: $color-base;
   background-color: transparent;
   border: none;
+  border-radius: 4px;
 
-  // @include icon;
-  background-image: url("../../icons/select_arr.svg");
-  background-repeat: no-repeat;
-  background-size: 10px 6px;
-  background-position: right 7px center;
-
-  @include media-tablet {
+  @include media-desktop {
     padding-left: 10px;
-    background-position: right 10px center;
+  }
+
+  &:hover {
+    background-color: $color-line;
+  }
+
+  &:active .catalog__icon:has(.catalog__select) {
+    background-color: red;
+  }
+}
+
+.catalog__icon:has(.catalog__select)::before {
+  // transform: rotate(180deg);
+  background-color: aquamarine;
+} 
+
+.catalog__icon {
+  position: relative;
+}
+
+.catalog__icon::before {
+  content: '';
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  top: 14px;
+  right: 7px;
+
+  @include media-desktop {
+    right: 10px;
   }
 }

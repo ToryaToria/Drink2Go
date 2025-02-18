@@ -7,7 +7,6 @@
 
 .control__mark-radio {
   box-sizing: border-box;
-  // display: inline-block;
   width: 24px;
   height: 24px;
 
@@ -23,34 +22,59 @@
     display: none;
     width: 16px;
     height: 16px;
-    background-color: $color-base;
+    background-color: blue;
     border-radius: 50%;
   }
 }
 
-// .control__checkbox:not(:disabled):hover + .control__mark-checkbox,
-//  .control__input:not(:disabled):hover + .control__mark-radio {
-// border-color: $color-black;
-// }
+.control__input[type="radio"]:not(:disabled):hover+.control__mark-radio,
+.control__input[type="radio"]:not(:disabled):focus+.control__mark-radio {
+  border-color: $color-base-light;
 
-.control__input:checked + .control__mark-radio {
+  &::before {
+    display: block;
+    background-color: $color-base-025;
+  }
+}
+
+.control__input[type="radio"]:not(:disabled):checked+.control__mark-radio {
   border-color: $color-base;
+
+  &::before {
+    display: block;
+    background-color: $color-base;
+  }
 }
 
-.control__input[type="radio"]:checked + .control__mark-radio::before {
-  content: "";
-  display: block;
+.control__input[type="radio"]:disabled+.control__mark-radio {
+  border-color: $color-grey-light;
+  cursor: no-drop;
 }
 
+.control__input[type="radio"]:disabled:checked+.control__mark-radio {
+  border-color: $color-grey-light;
+  cursor: no-drop;
 
+
+  &::before {
+    display: block;
+    background-color: $color-grey-light;
+    cursor: no-drop;
+  }
+}
+
+.control__input[type="radio"]:disabled~.text-label {
+  color: $color-grey-light;
+  cursor: no-drop;
+}
+
+//===========================
 .control__mark-check {
   box-sizing: border-box;
-  // display: block;
   width: 42px;
   height: 24px;
-  // border: 1px solid $color-text-second;
+  border: 2px solid transparent;
   border-radius: 12px;
-  // padding: 2px 20px 2px 2px;
   background-color: $color-grey;
 
   display: flex;
@@ -63,38 +87,44 @@
     content: "";
     width: 20px;
     height: 20px;
-    margin: 2px 20px 2px 2px;
+    margin: 0 20px 0 0;
     background-color: $color-white;
     border-radius: 50%;
   }
 }
 
-// .control__checkbox:not(:disabled):hover + .control__mark-checkbox {
-//, .control__input:not(:disabled):hover + .control__mark-check
-// border-color: $color-black;
-// }
+.control__input[type="checkbox"]:not(:disabled):hover+.control__mark-check,
+.control__input[type="checkbox"]:not(:disabled):focus+.control__mark-check {
+  border-color: $color-base-light;
+  background-color: $color-base-025;
+}
 
-.control__input[type="checkbox"]:checked ~ .control__mark-check {
+.control__input[type="checkbox"]:checked~.control__mark-check {
   background-color: $color-base;
 }
 
-.control__input[type="checkbox"]:disabled ~ .control__mark-check {
+.control__input[type="checkbox"]:disabled~.control__mark-check {
   background-color: $color-grey-light;
   cursor: no-drop;
 }
 
-.control__input[type="radio"]:disabled ~ .control__mark-radio {
-  border-color: $color-grey-light;
+.control__input[type="checkbox"]:disabled:checked~.control__mark-check {
+  background-color: $color-grey-light;
+  cursor: no-drop;
+
+  &::before {
+    background-color: $color-grey;
+    cursor: no-drop;
+  }
+}
+
+
+.control__input[type="checkbox"]:disabled~.text-label {
+  color: $color-grey-light;
   cursor: no-drop;
 }
 
-.control__input[type="checkbox"]:disabled ~ .text-label,
-.control__input[type="radio"]:disabled ~ .text-label {
-  color: $color-grey-light;
-  // cursor: no-drop;
-}
-
-.control__input[type="checkbox"]:checked ~ .control__mark-check::before {
+.control__input[type="checkbox"]:checked~.control__mark-check::before {
   content: "";
-  margin: 2px 2px 2px 20px;
+  margin: 0 0 0 20px;
 }

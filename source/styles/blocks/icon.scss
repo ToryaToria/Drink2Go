@@ -20,9 +20,6 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 100%;
-  // @include media-desktop {
-  //   padding-right: 5px;
-  //   }
 }
 
 .icon--user::before {
@@ -35,10 +32,6 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 100%;
-
-  // @include media-desktop {
-  // padding-right: 5px;
-  // }
 }
 
 .icon--slider-btn::before {
@@ -94,6 +87,18 @@
   background-image: url("../../icons/basket_add.svg");
 }
 
+.icon--select::before {
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+
+  background-color: $color-base;
+
+  mask-image: url("../../icons/select_arr.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
 
 .icon-vk::before {
   background-color: $color-grey;

@@ -48,5 +48,4 @@ window.addEventListener("keydown", function(event) {
     updateSlider();
   }
 });
-console.log("hi");
 //# sourceMappingURL=slider.js.map

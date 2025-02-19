@@ -3,3 +3,4 @@ backstop_data/
 test-config/
 engine_scripts/
 run-test.js
+source/styles/common/no-ui-slider-styles.scss

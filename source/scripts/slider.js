@@ -55,5 +55,3 @@ window.addEventListener('keydown', function (event) {
     updateSlider();
   }
 })
-
-console.log('hi');

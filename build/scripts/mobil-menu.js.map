@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["source/scripts/mobil-menu.js"],
+  "sourcesContent": ["const btnMob = document.querySelector('.hamburger');\n\nconst menuMob = document.querySelector('#nav__list');\n\nconst onClickBtn = () => {\n  btnMob.classList.toggle('hamburger--closer');\n  menuMob.classList.toggle('hidden');\n  console.log('\u043A\u0443')\n}\n\nbtnMob.addEventListener('click', onClickBtn);\n"],
+  "mappings": ";AAAA,IAAM,SAAS,SAAS,cAAc,YAAY;AAElD,IAAM,UAAU,SAAS,cAAc,YAAY;AAEnD,IAAM,aAAa,MAAM;AACvB,SAAO,UAAU,OAAO,mBAAmB;AAC3C,UAAQ,UAAU,OAAO,QAAQ;AACjC,UAAQ,IAAI,cAAI;AAClB;AAEA,OAAO,iBAAiB,SAAS,UAAU;",
+  "names": []
+}

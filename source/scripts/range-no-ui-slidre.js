@@ -1,4 +1,7 @@
 const sliderElement = document.querySelector('.range__ui-slider');
+
+const wrappField = document.querySelector('.range__wrapp-field')
+
 const formatValues = [
   document.getElementById("min-price"),
   document.getElementById("max-price"),
@@ -15,7 +18,7 @@ noUiSlider.create(sliderElement, {
   connect: [false, true, false],
 
   format: {
-    from: (value)=> {
+    from: (value) => {
       return Number(value).toFixed(0);
     },
     to: (value) => {
@@ -27,3 +30,17 @@ noUiSlider.create(sliderElement, {
 sliderElement.noUiSlider.on("update", function (values, handle) {
   formatValues[handle].value = values[handle];
 });
+
+formatValues.forEach((button) => {
+  button.addEventListener('input', () => {
+    console.log(button.id);
+    if (button.id === 'min-price') {
+      sliderElement.noUiSlider.set([button.value, null]);
+      console.log(button.id);
+    }
+    if (button.id === 'max-price') {
+      sliderElement.noUiSlider.set([null, button.value]);
+      console.log(button.id);
+    }
+  })
+})

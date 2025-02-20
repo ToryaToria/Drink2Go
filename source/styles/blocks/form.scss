@@ -40,10 +40,10 @@
   gap: 20px;
 
   @include media-tablet {
-    flex-direction: row;
     gap: 20px;
+    flex-flow: wrap;
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
   }
 }
 

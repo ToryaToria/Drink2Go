@@ -7,7 +7,7 @@
 @import "./common/visually-hidden";
 @import "./common/container.scss";
 @import "./common/page.scss";
-@import "./common/no-ui-slider-styles.scss";
+// @import "./common/no-ui-slider-styles.scss";
 
 
 /* BLOCKS */
@@ -32,3 +32,4 @@
 
 /* VENDOR */
 @import "../vendor/nouislider.css";
+@import "../vendor/no-ui-slider-styles.scss";

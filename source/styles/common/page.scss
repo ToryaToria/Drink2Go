@@ -1,5 +1,5 @@
 .page {
-  /*  для стики-футера */
+  /* для стики-футера */
   height: 100%;
 }
 
@@ -14,13 +14,13 @@
   min-width: $mobile-width;
   // max-width: $desktop-width;
 
-  /*  для стики-футера */
+  /* для стики-футера */
   display: flex;
   min-height: 100%;
   flex-direction: column;
 }
 
 .page__main {
-  /*  для стики-футера*/
+  /* для стики-футера */
   flex-grow: 1;
 }

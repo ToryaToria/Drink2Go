@@ -2,10 +2,11 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  
+
   @include media-tablet {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+
   @include media-desktop {
     gap: 20px;
     align-items: stretch;

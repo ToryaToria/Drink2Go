@@ -1,5 +1,7 @@
 .social {
   @include list-reset;
+  flex-wrap: wrap;
+
 }
 
 .social__link {

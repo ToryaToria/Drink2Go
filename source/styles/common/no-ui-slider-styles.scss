@@ -43,9 +43,40 @@
 
   border-radius: 50%;
   border: 2px solid $color-base-light;
+
 }
 
-.noUi-handle::before,
+.noUi-touch-area {
+  display: none;
+}
+
+.noUi-handle::before {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  top: 2px;
+  left: 2px;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 .noUi-handle::after {
   display: none;
+}
+
+.noUi-handle:hover,
+.noUi-handle:focus {
+  &::before {
+    background-color: $color-base-025;
+  }
+}
+
+.noUi-handle:active {
+  &::before {
+    background-color: $color-base;
+  }
 }

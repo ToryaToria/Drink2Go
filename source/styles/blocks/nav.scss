@@ -22,6 +22,7 @@
 
     display: flex;
     margin-right: 60px;
+    flex-wrap: wrap;
   }
 
   @include media-desktop {

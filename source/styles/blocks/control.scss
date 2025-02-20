@@ -6,6 +6,7 @@
 }
 
 .control__mark-radio {
+  flex-shrink: 0;
   box-sizing: border-box;
   width: 24px;
   height: 24px;
@@ -87,7 +88,7 @@
     content: "";
     width: 20px;
     height: 20px;
-    margin: 0 20px 0 0;
+    margin: 0 18px 0 0;
     background-color: $color-white;
     border-radius: 50%;
   }
@@ -126,5 +127,5 @@
 
 .control__input[type="checkbox"]:checked ~ .control__mark-check::before {
   content: "";
-  margin: 0 0 0 20px;
+  margin: 0 0 0 18px;
 }

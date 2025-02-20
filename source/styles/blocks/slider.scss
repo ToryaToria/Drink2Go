@@ -150,7 +150,7 @@
   }
 }
 
-.slider__btn {
+.slider__button {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -165,17 +165,24 @@
   border: none;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  transition: background-color 0.3s ease-in-out;
+
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     background: linear-gradient(to right, $color-white, transparent);
   }
 
-  &:active {
+  &:not(:disabled):active {
     background: linear-gradient(to right, $color-base-025, transparent);
   }
 
-  &:disabled::before {
-    background-color: $color-grey;
+  &:disabled {
+    cursor: no-drop;
+
+    &::before {
+      background-color: $color-grey;
+    }
   }
 
   &--r {

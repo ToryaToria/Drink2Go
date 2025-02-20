@@ -2,8 +2,8 @@
 var slider = document.querySelector(".slider");
 var slides = slider.querySelectorAll(".slider__item");
 var controlButtons = slider.querySelectorAll(".slider__dots");
-var prevButton = slider.querySelector(".slider__btn--prev");
-var nextButton = slider.querySelector(".slider__btn--next");
+var prevButton = slider.querySelector(".slider-button-prev");
+var nextButton = slider.querySelector(".slider-button-next");
 var currentSlide = 0;
 var slideCount = slides.length;
 var activeSlides = "slider__item--current";
@@ -19,11 +19,33 @@ var updateSlider = () => {
     }
   });
 };
+var btnDisabled = () => {
+  let fl;
+  if (currentSlide === 0) {
+    fl = true;
+    console.log("\u043D\u0430\u0447\u0430\u043B\u043E");
+    prevButton.disabled = fl;
+    return;
+  }
+  if (currentSlide === slideCount - 1) {
+    fl = true;
+    console.log("\u043A\u043E\u043D\u0435\u0446");
+    nextButton.disabled = fl;
+    return;
+  } else {
+    fl = false;
+    console.log("\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0430");
+    nextButton.disabled = fl;
+    prevButton.disabled = fl;
+    return;
+  }
+};
 controlButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (index < slideCount) {
       currentSlide = index;
       updateSlider();
+      btnDisabled();
     }
   });
 });
@@ -31,21 +53,25 @@ prevButton.addEventListener("click", () => {
   if (currentSlide > 0) {
     currentSlide--;
     updateSlider();
+    btnDisabled();
   }
 });
 nextButton.addEventListener("click", () => {
   if (currentSlide < slideCount - 1) {
     currentSlide++;
     updateSlider();
+    btnDisabled();
   }
 });
 window.addEventListener("keydown", function(event) {
   if (event.key === "ArrowLeft" && currentSlide > 0) {
     currentSlide--;
     updateSlider();
+    btnDisabled();
   } else if (event.key === "ArrowRight" && currentSlide < slideCount - 1) {
     currentSlide++;
     updateSlider();
+    btnDisabled();
   }
 });
 //# sourceMappingURL=slider.js.map

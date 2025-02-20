@@ -1,10 +1,9 @@
 // source/scripts/mobil-menu.js
-var btnMob = document.querySelector(".hamburger");
-var menuMob = document.querySelector("#nav__list");
+var btnMob = document.querySelector(".js-toggle-button");
+var menuMob = document.querySelector(".nav__list");
 var onClickBtn = () => {
-  btnMob.classList.toggle("hamburger--closer");
+  btnMob.classList.toggle("js-toggle-button--closer");
   menuMob.classList.toggle("hidden");
-  console.log("\u043A\u0443");
 };
 btnMob.addEventListener("click", onClickBtn);
 //# sourceMappingURL=mobil-menu.js.map

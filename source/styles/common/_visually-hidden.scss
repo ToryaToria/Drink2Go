@@ -11,10 +11,6 @@
   overflow: hidden;
 }
 
-.hidden {
+.hidden{
   display: none;
-
-  @include media-tablet {
-    display: block;
-  }
 }

@@ -15,7 +15,7 @@
 
   <link rel="preload" href="./css/style.css" as="style">
   <link rel="preload" href="./fonts/Montserrat-Regular.woff2fonts/lato/Lato-Regular.woff2" as="font">
-  
+
   <script src="./vendor/nouislider.js" defer></script>
 </head>
 
@@ -60,7 +60,7 @@
           <span class="user__txt">Корзина</span>
         </a>
 
-        <button class="hamburger" type="button" aria-label="открыть меню">
+        <button class="js-toggle-button" type="button" aria-label="открыть меню">
           <span class="visually-hidden">Меню</span>
         </button>
       </div>
@@ -159,7 +159,7 @@
           </li>
         </ul>
 
-        <div class="slider__dots-wrapp">
+        <div class="slider__dots-wrapp slider-pagination">
           <button class="slider__dots slider__dots--current" type="button">
             <span class="visually-hidden">слайд 1</span>
           </button>
@@ -171,11 +171,11 @@
           </button>
         </div>
 
-        <div class="slider__btn-wrapp">
-          <button class="slider__btn slider__btn--prev icon icon--slider-btn" type="button">
+        <div class="slider__button-wrapp">
+          <button class="slider__button slider-button-prev icon icon--slider-btn" type="button" disabled>
             <span class="visually-hidden">Назад</span>
           </button>
-          <button class="slider__btn slider__btn--next icon icon--slider-btn slider__btn--r" type="button">
+          <button class="slider__button slider-button-next icon icon--slider-btn slider__button--r" type="button">
             <span class="visually-hidden">Вперед</span>
           </button>
         </div>

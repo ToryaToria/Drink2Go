@@ -1,5 +1,4 @@
 .page {
-
   /*  для стики-футера */
   height: 100%;
 }
@@ -21,7 +20,7 @@
   flex-direction: column;
 }
 
-// .page__main {
-//   /*  для стики-футера*/
-//   flex-grow: 1;
-// }
+.page__main {
+  /*  для стики-футера*/
+  flex-grow: 1;
+}

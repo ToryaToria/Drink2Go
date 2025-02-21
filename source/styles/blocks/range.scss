@@ -63,9 +63,8 @@
 }
 
 .range__toggle:not(:disabled):active {
-
   &::before {
-    background-color: $color-base-025; // НЕ РАБОТАЕТ!!!!
+    background-color: $color-base-025; 
   }
 }
 

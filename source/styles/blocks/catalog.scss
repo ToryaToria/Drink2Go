@@ -54,11 +54,6 @@
   }
 }
 
-// .catalog__select:not(:disabled):hover {
-//   cursor: pointer;
-//   border: 2px solid #68a2ca;
-// }
-
 .catalog__select {
   appearance: none;
   cursor: pointer;
@@ -77,19 +72,16 @@
     padding-left: 10px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-line;
   }
 
-  // &:active .catalog__icon:has(.catalog__select) {
-  //   background-color: red;
-  // }
-}
+  &:active {
+    background-image: url("../../icons/selict_arr_active.svg");
+  }
 
-// .catalog__icon:has(.catalog__select)::before {
-//   // transform: rotate(180deg);
-//   background-color: aquamarine;
-// }
+}
 
 .catalog__icon {
   position: relative;

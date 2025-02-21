@@ -87,17 +87,12 @@
   background-image: url("../../icons/basket_add.svg");
 }
 
-.icon--select::before {
-  display: inline-block;
-  width: 10px;
-  height: 6px;
-
+.icon--select {
   background-color: $color-base;
-
-  mask-image: url("../../icons/select_arr.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 100%;
+  background-image: url("../../icons/select_arr.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: 144px 11px;
 }
 
 .icon-vk::before {

@@ -1,0 +1,54 @@
+.user {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  @include media-tablet {
+    flex-wrap: wrap;
+  }
+
+  @include media-desktop {
+    gap: 20px;
+    align-items: stretch;
+  }
+}
+
+.user__txt {
+  display: none;
+
+  @include media-desktop {
+    display: inline;
+  }
+}
+
+.user__link {
+  box-sizing: border-box;
+  padding: 22px 22px 18px;
+  width: 60px;
+  height: 60px;
+
+  &:hover,
+  &:focus {
+    color: $color-base;
+  }
+
+  &:active {
+    background-color: $color-line;
+  }
+
+  @include media-desktop {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 20px;
+    gap: 8px;
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before,
+    &:disabled::before {
+      background-color: $color-base;
+    }
+  }
+}

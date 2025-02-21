@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+}
+
+.header__logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-decoration: none;
+  margin-right: 88px;
+  padding-top: 4px;
+  cursor: default;
+
+  @include media-tablet {
+    margin-right: 67px;
+  }
+
+  @include media-desktop {
+    margin-right: 0;
+    width: 316px;
+  }
+}
+
+.header__logo-descktop {
+  display: none;
+  user-select: none;
+
+  @include media-desktop {
+    display: inline;
+    padding-top: 2px;
+  }
+}

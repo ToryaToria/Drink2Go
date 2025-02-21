@@ -1,0 +1,28 @@
+.map__wrapp {
+  display: block;
+  width: 100%;
+  height: 420px;
+
+  @include media-tablet {
+    height: 480px;
+  }
+
+  @include media-desktop {
+    height: 540px;
+  }
+}
+
+.map__img {
+  width: 100%;
+  height: 420px;
+
+  object-fit: cover;
+
+  @include media-tablet {
+    height: 480px;
+  }
+
+  @include media-desktop {
+    height: 540px;
+  }
+}

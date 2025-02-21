@@ -1,0 +1,160 @@
+// стили для типографики
+
+.text-base {
+  @include font ($size: 14px, $line-height: 20px);
+
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.text-base-card {
+  @include font ($size: 14px, $line-height: 20px);
+}
+
+.text-slider {
+  @include font ($size: 14px, $line-height: 20px);
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.title-slider {
+  /* h1 */
+
+  @include font ($size: 36px, $line-height: 48px, $weight: 600);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  @include media-tablet {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @include media-desktop {
+    text-align: left;
+  }
+}
+
+.title-section {
+  /* h2 */
+
+  @include font ($size: 24px, $line-height: 36px, $weight: 600);
+
+  @include media-tablet {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.text-logo {
+  @include font ($size: 12px, $line-height: 16px);
+  text-decoration: none;
+}
+
+.text-nav {
+  @include font ($size: 12px, $line-height: 16px, $weight: 500);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.text-footer-nav {
+  @include font ($size: 12px, $line-height: 16px, $weight: 500);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.text-badge {
+  @include font ($size: 12px, $line-height: 16px, $weight: 600, $color: $color-base);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.text-price {
+  @include font ($size: 20px, $line-height: 32px, $weight: 700);
+  margin-right: 20px;
+  margin-left: -2px;
+  background-position: right 7px center;
+}
+
+.text-old-price {
+  @include font ($size: 16px, $line-height: 32px, $color: $color-base);
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+.text-btn {
+  @include font ($size: 16px, $line-height: 24px, $color: $color-white);
+}
+
+.text-btn-img {
+  @include font ($size: 14px, $line-height: 20px, $color: $color-white);
+}
+
+.text-add {
+  @include font ($size: 18px, $line-height: 32px, $weight: 600);
+  margin-bottom: 4px;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.title-filter {
+  @include font ($size: 16px, $line-height: 24px, $weight: 700);
+}
+
+.text-label {
+  @include font ($size: 16px, $line-height: 24px);
+}
+
+.title-price {
+  @include font ($size: 18px, $line-height: 32px, $weight: 600);
+  margin-bottom: 4px;
+
+  @include media-tablet {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.text-pagin {
+  @include font ($size: 16px, $line-height: 24px, $color: $color-base);
+  text-decoration: none;
+
+  &--current {
+    color: $color-text-base;
+    font-weight: 700;
+  }
+}
+
+.title-info {
+  @include font ($size: 14px, $line-height: 20px, $weight: 600, $color: $color-base);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+
+  @include media-tablet {
+    margin-bottom: 14px;
+  }
+}
+
+.text-mini {
+  @include font ($size: 14px, $line-height: 20px);
+  text-decoration: none;
+}
+
+.text-dev {
+  @include font ($size: 12px, $line-height: 16px, $color: $color-grey);
+}
+
+.text-range {
+  @include font ($size: 16px, $line-height: 24px, $weight: 500);
+}

@@ -23,7 +23,6 @@
     display: none;
     width: 16px;
     height: 16px;
-    // background-color: blue;
     border-radius: 50%;
   }
 }
@@ -69,7 +68,6 @@
   cursor: no-drop;
 }
 
-//===========================
 .control__mark-check {
   box-sizing: border-box;
   width: 42px;
@@ -118,7 +116,6 @@
     cursor: no-drop;
   }
 }
-
 
 .control__input[type="checkbox"]:disabled ~ .text-label {
   color: $color-grey-light;

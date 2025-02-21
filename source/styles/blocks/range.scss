@@ -27,7 +27,6 @@
   position: absolute;
   cursor: pointer;
 
-
   border-radius: 50%;
   background-color: #ffffff;
   border: 2px solid $color-base-light;
@@ -56,7 +55,6 @@
   }
 }
 
-
 .range__toggle:not(:disabled):hover,
 .range__toggle:not(:disabled):focus {
   &::before {
@@ -65,8 +63,6 @@
 }
 
 .range__toggle:not(:disabled):active {
-
-  // background-color: green;
 
   &::before {
     background-color: $color-base-025; // НЕ РАБОТАЕТ!!!!
@@ -77,7 +73,6 @@
   border-color: #e5e5e5;
 }
 
-/* +++++++++++++ мин и мах  range +++++++++++++++++++ */
 .range__xz {
   width: 8px;
   height: 2px;
@@ -121,7 +116,6 @@
 .range__field::-webkit-outer-spin-button {
   appearance: none;
 }
-
 
 .range__field {
   box-sizing: border-box;

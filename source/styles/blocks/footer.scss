@@ -21,11 +21,11 @@
 
 .footer__wrapp-inner {
   display: flex;
-  // justify-content: space-between;
   margin-bottom: 20px;
 
   @include media-tablet {
     margin-bottom: 8px;
+      justify-content: space-between;
   }
 
   @include media-desktop {
@@ -98,6 +98,8 @@
   margin-top: 2px;
   margin-bottom: 2px;
 
+  cursor: default;
+  
   @include media-tablet {
     width: 170px;
     margin-top: 0;
@@ -121,6 +123,7 @@
 
 .footer__logo-text {
   display: none;
+  user-select: none;
 
   @include media-desktop {
     display: block;

@@ -16,6 +16,7 @@
 
 .pagination__txt {
   display: none;
+  user-select: none;
 
   @include media-tablet {
     display: inline;

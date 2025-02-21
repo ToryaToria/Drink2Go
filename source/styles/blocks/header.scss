@@ -9,6 +9,7 @@
   text-decoration: none;
   margin-right: 88px;
   padding-top: 4px;
+  cursor: default;
 
   @include media-tablet {
     margin-right: 67px;
@@ -22,6 +23,7 @@
 
 .header__logo-descktop {
   display: none;
+  user-select: none;
 
   @include media-desktop {
     display: inline;

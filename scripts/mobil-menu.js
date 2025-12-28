@@ -1,0 +1,1 @@
+var t=document.querySelector(".js-toggle-button"),e=document.querySelector(".nav__list"),o=()=>{t.classList.toggle("js-toggle-button--closer"),e.classList.toggle("hidden")};t.addEventListener("click",o);

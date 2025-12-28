@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["source/scripts/mobil-menu.js"],
-  "sourcesContent": ["const btnMob = document.querySelector('.js-toggle-button');\n\nconst menuMob = document.querySelector('.nav__list');\n\nconst onClickBtn = () => {\n  btnMob.classList.toggle('js-toggle-button--closer');\n  menuMob.classList.toggle('hidden');\n}\n\nbtnMob.addEventListener('click', onClickBtn);\n"],
-  "mappings": ";AAAA,IAAM,SAAS,SAAS,cAAc,mBAAmB;AAEzD,IAAM,UAAU,SAAS,cAAc,YAAY;AAEnD,IAAM,aAAa,MAAM;AACvB,SAAO,UAAU,OAAO,0BAA0B;AAClD,UAAQ,UAAU,OAAO,QAAQ;AACnC;AAEA,OAAO,iBAAiB,SAAS,UAAU;",
-  "names": []
-}

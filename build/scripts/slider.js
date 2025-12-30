@@ -1,1 +1,77 @@
-var o=document.querySelector(".slider"),n=o.querySelectorAll(".slider__item"),f=o.querySelectorAll(".slider__dots"),c=o.querySelector(".slider-button-prev"),d=o.querySelector(".slider-button-next"),t=0,i=n.length,u="slider__item--current",a="slider__dots--current",l=()=>{f.forEach((e,s)=>{s===t?(e.classList.add(a),n[s].classList.add(u)):(e.classList.remove(a),n[s].classList.remove(u))})},r=()=>{let e;if(t===0){e=!0,console.log("\u043D\u0430\u0447\u0430\u043B\u043E"),c.disabled=e;return}if(t===i-1){e=!0,console.log("\u043A\u043E\u043D\u0435\u0446"),d.disabled=e;return}else{e=!1,console.log("\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0430"),d.disabled=e,c.disabled=e;return}};f.forEach((e,s)=>{e.addEventListener("click",()=>{s<i&&(t=s,l(),r())})});c.addEventListener("click",()=>{t>0&&(t--,l(),r())});d.addEventListener("click",()=>{t<i-1&&(t++,l(),r())});window.addEventListener("keydown",function(e){e.key==="ArrowLeft"&&t>0?(t--,l(),r()):e.key==="ArrowRight"&&t<i-1&&(t++,l(),r())});
+// source/scripts/slider.js
+var slider = document.querySelector(".slider");
+var slides = slider.querySelectorAll(".slider__item");
+var controlButtons = slider.querySelectorAll(".slider__dots");
+var prevButton = slider.querySelector(".slider-button-prev");
+var nextButton = slider.querySelector(".slider-button-next");
+var currentSlide = 0;
+var slideCount = slides.length;
+var activeSlides = "slider__item--current";
+var activeButton = "slider__dots--current";
+var updateSlider = () => {
+  controlButtons.forEach((button, index) => {
+    if (index === currentSlide) {
+      button.classList.add(activeButton);
+      slides[index].classList.add(activeSlides);
+    } else {
+      button.classList.remove(activeButton);
+      slides[index].classList.remove(activeSlides);
+    }
+  });
+};
+var btnDisabled = () => {
+  let fl;
+  if (currentSlide === 0) {
+    fl = true;
+    console.log("\u043D\u0430\u0447\u0430\u043B\u043E");
+    prevButton.disabled = fl;
+    return;
+  }
+  if (currentSlide === slideCount - 1) {
+    fl = true;
+    console.log("\u043A\u043E\u043D\u0435\u0446");
+    nextButton.disabled = fl;
+    return;
+  } else {
+    fl = false;
+    console.log("\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0430");
+    nextButton.disabled = fl;
+    prevButton.disabled = fl;
+    return;
+  }
+};
+controlButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    if (index < slideCount) {
+      currentSlide = index;
+      updateSlider();
+      btnDisabled();
+    }
+  });
+});
+prevButton.addEventListener("click", () => {
+  if (currentSlide > 0) {
+    currentSlide--;
+    updateSlider();
+    btnDisabled();
+  }
+});
+nextButton.addEventListener("click", () => {
+  if (currentSlide < slideCount - 1) {
+    currentSlide++;
+    updateSlider();
+    btnDisabled();
+  }
+});
+window.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowLeft" && currentSlide > 0) {
+    currentSlide--;
+    updateSlider();
+    btnDisabled();
+  } else if (event.key === "ArrowRight" && currentSlide < slideCount - 1) {
+    currentSlide++;
+    updateSlider();
+    btnDisabled();
+  }
+});
+//# sourceMappingURL=slider.js.map

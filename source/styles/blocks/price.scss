@@ -10,6 +10,8 @@
     gap: 30px;
     flex-flow: row wrap;
     margin-bottom: 70px;
+   justify-content: center;
+
   }
 
   @include media-desktop {

@@ -76,11 +76,11 @@
           <div class="slider__wrapp">
 
             <picture class="slider__img">
-              <source type="image/webp" srcset="/images/flat_white@2x@1x.webp 1x,
-              ./images/flat_white@2x@2x.webp 2x" width="280" height="280">
+              <source type="image/webp" srcset="./images/flat_white/flat_white@1x.webp 1x,
+               ./images/flat_white/flat_white@2x.webp 2x" width="280" height="280">
 
-              <img class="slider__img" src="./images/flat_white@2x@1x.png" srcset="./images/flat_white@2x@2x.png 2x"
-                width="280" height="280" alt="Декаф Флэт Уайт">
+              <img class="slider__img" src="./images/flat_white/flat_white@1x.png"
+                srcset="./images/flat_white/flat_white@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
             </picture>
 
             <div class="slider__info">
@@ -102,59 +102,58 @@
 
         <li class="slider__item slider__item--2">
           <div class="slider__wrapp">
-
             <picture class="slider__img">
-              <source type="image/webp" srcset="/images/lavender_img@2x@1x.webp 1x,
-                ./images/lavender_img@2x@2x.webp 2x" width="280" height="280">
+              <source type="image/webp" srcset="./images/lavender/lavender@1x.webp 1x,
+               ./images/lavender/lavender@2x.webp 2x" width="280" height="280">
 
-              <img class="slider__img" src="./images/lavender_img@2x@1x.png" srcset="./images/lavender_img@2x@2x.png 2x"
-                width="280" height="280" alt="Лавандовый Латте">
+              <img class="slider__img" src="./images/lavender/lavender@1x.png"
+                srcset="./images/lavender/lavender@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
             </picture>
-            <div>
-              <p class="slider__badge text-badge">Новинка!</p>
-              <h2 class="slider__title title-slider">Лавандовый Латте</h2>
 
-              <p class="slider__text text-slider">
-                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-                лавандовым сиропом унесёт&nbsp;вас прямо на&nbsp;вершину Радужных гор
-              </p>
+              <div class="slider__info">
+                <p class="slider__badge text-badge">Новинка!</p>
+                <h2 class="slider__title title-slider">Лавандовый Латте</h2>
 
-              <div class="slider__buy">
-                <p class="text-old-price">285₽</p>
-                <p class="text-price">265₽</p>
+                <p class="slider__text text-slider">
+                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                  лавандовым сиропом унесёт&nbsp;вас прямо на&nbsp;вершину Радужных гор
+                </p>
 
-                <button class="button text-btn" type="button">Заказать</button>
+                <div class="slider__buy">
+                  <p class="text-old-price">285₽</p>
+                  <p class="text-price">265₽</p>
+
+                  <button class="button text-btn" type="button">Заказать</button>
+                </div>
               </div>
             </div>
-          </div>
         </li>
 
         <li class="slider__item slider__item--3">
           <div class="slider__wrapp">
-
             <picture class="slider__img">
-              <source type="image/webp" srcset="/images/espresso@2x@1x.webp 1x,
-                ./images/espresso@2x@2x.webp 2x" width="280" height="280">
+              <source type="image/webp" srcset="./images/espresso/espresso@1x.webp 1x,
+                ./images/espresso/espresso@2x.webp 2x" width="280" height="280">
 
-              <img class="slider__img" src="./images/espresso@2x@1x.png" srcset="./images/espresso@2x@2x.png 2x"
-                width="280" height="280" alt="Тройной Эспрессо">
+              <img class="slider__img" src="./images/espresso/espresso@1x.png"
+                srcset="./images/espresso/espresso@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо">
             </picture>
-            <div>
 
-              <p class="slider__badge text-badge">Новинка!</p>
-              <h2 class="slider__title title-slider">Тройной Эспрессо</h2>
-              <p class="slider__text text-slider">Мощнее укола адреналина, чернее самой тёмной ночи, этот
-                тройной&nbsp;эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="slider__info">
+                <p class="slider__badge text-badge">Новинка!</p>
+                <h2 class="slider__title title-slider">Тройной Эспрессо</h2>
+                <p class="slider__text text-slider">Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                  тройной&nbsp;эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
 
-              <div class="slider__buy">
-                <p class="text-old-price">395₽</p>
-                <p class="text-price">375₽</p>
+                <div class="slider__buy">
+                  <p class="text-old-price">395₽</p>
+                  <p class="text-price">375₽</p>
 
-                <button class="button text-btn" type="button">Заказать</button>
+                  <button class="button text-btn" type="button">Заказать</button>
 
+                </div>
               </div>
             </div>
-          </div>
         </li>
       </ul>
 
@@ -231,13 +230,15 @@
               </div>
               <div class="range__wrapp-field">
                 <label class="range__label-price " for="min-price">
-                  <input class="range__field text-range" type="number" id="min-price" name="min-price" min="0" placeholder="0">
+                  <input class="range__field text-range" type="number" id="min-price" name="min-price" min="0"
+                    placeholder="0">
                 </label>
 
                 <div class="range__xz"></div>
 
                 <label class="range__label-price" for="max-price">
-                  <input class="range__field text-range" type="number" id="max-price" name="max-price" value="900" min="0" placeholder="900">
+                  <input class="range__field text-range" type="number" id="max-price" name="max-price" value="900"
+                    min="0" placeholder="900">
                 </label>
               </div>
             </div>
@@ -362,7 +363,7 @@
             <li class="price__card">
 
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-1@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-1@2x@1x.webp 1x,
                 ./images/coffee-can-1@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-1@2x@1x.png"
@@ -380,7 +381,7 @@
 
             <li class="price__card">
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-2@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-2@2x@1x.webp 1x,
                 ./images/coffee-can-2@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-2@2x@1x.png"
@@ -398,7 +399,7 @@
 
             <li class="price__card">
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-3@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-3@2x@1x.webp 1x,
                 ./images/coffee-can-3@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-3@2x@1x.png"
@@ -416,7 +417,7 @@
 
             <li class="price__card">
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-4@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-4@2x@1x.webp 1x,
                 ./images/coffee-can-4@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-4@2x@1x.png"
@@ -434,7 +435,7 @@
 
             <li class="price__card">
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-5@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-5@2x@1x.webp 1x,
                 ./images/coffee-can-5@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-5@2x@1x.png"
@@ -452,7 +453,7 @@
 
             <li class="price__card">
               <picture class="price__img">
-                <source type="image/webp" srcset="/images/coffee-can-6@2x@1x.webp 1x,
+                <source type="image/webp" srcset="./images/coffee-can-6@2x@1x.webp 1x,
                 ./images/coffee-can-6@2x@2x.webp 2x" width="130" height="188">
 
                 <img class="price__img" src="./images/coffee-can-6@2x@1x.png"
@@ -621,7 +622,7 @@
 
     <div class="footer__developed">
       <a class="footer__developed-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
-      rel="noreferrer noopener">
+        rel="noreferrer noopener">
         <span class="text-dev">Разработано в HTML Academy</span>
 
         <svg class="footer__developed-img" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"

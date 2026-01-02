@@ -37,8 +37,12 @@
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
   &--current {
     background-color: transparent;
+    cursor: inherit;
   }
 
   &--text {
@@ -56,15 +60,19 @@
     }
   }
 
+  &:not(:disabled):focus,
+  &:not(.pagination__link--current):not(:disabled):focus {
+    outline: none;
+  }
+
+  &:focus-visible::before,
   &:hover::before,
-  &:focus::before,
-  &:active::before,
-  &:disabled::before {
+  &:active::before {
     background-color: $color-white;
   }
 
-  &:not(.pagination__link--current):not(:disabled):hover,
-  &:not(.pagination__link--current):not(:disabled):focus {
+  &:not(.pagination__link--current):not(:disabled):focus-visible,
+  &:not(.pagination__link--current):not(:disabled):hover {
     color: $color-white;
     background-color: $color-base-light;
   }

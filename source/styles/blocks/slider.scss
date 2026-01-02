@@ -173,8 +173,14 @@
   border: none;
   cursor: pointer;
 
-  &:not(:disabled):hover,
+  transition: 0.3s ease-in-out;
+
   &:not(:disabled):focus {
+    outline: none;
+  }
+
+  &:not(:disabled):focus-visible,
+  &:not(:disabled):hover {
     background: linear-gradient(to right, $color-white, transparent);
   }
 
@@ -234,6 +240,12 @@
   margin-bottom: 10px;
   background-color: $color-white;
   cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
 
   &:focus-visible,
   &:hover {

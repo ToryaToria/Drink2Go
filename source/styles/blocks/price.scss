@@ -10,8 +10,7 @@
     gap: 30px;
     flex-flow: row wrap;
     margin-bottom: 70px;
-   justify-content: center;
-
+    justify-content: center;
   }
 
   @include media-desktop {
@@ -24,10 +23,7 @@
   background-color: $color-white;
   padding: 40px 20px 20px;
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  }
+  transition: 0.3s ease-in-out;
 
   @include media-tablet {
     width: 349px;
@@ -36,6 +32,15 @@
 
   @include media-desktop {
     width: 317px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   }
 }
 

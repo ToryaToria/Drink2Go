@@ -38,13 +38,19 @@
   border-top: 1px solid $color-line;
   text-align: center;
 
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
   &--current {
     color: $color-base;
     border-bottom: 2px solid $color-base;
   }
 
-  &:hover,
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     color: $color-base;
   }
 

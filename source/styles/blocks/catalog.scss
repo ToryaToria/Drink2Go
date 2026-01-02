@@ -72,8 +72,12 @@
     padding-left: 10px;
   }
 
-  &:hover,
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     background-color: $color-line;
   }
 

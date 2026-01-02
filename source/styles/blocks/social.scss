@@ -11,8 +11,19 @@
   justify-content: center;
   align-items: center;
 
-  &:hover,
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &::before {
+    transition: background-color 0.3s ease-in-out;
+  }
+
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     background-color: $color-line;
 
     &::before {

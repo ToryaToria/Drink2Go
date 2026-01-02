@@ -9,13 +9,10 @@ btnMob.addEventListener("click", onClickBtn);
 
 // source/scripts/range-no-ui-slidre.js
 var sliderElement = document.querySelector(".range__ui-slider");
-var wrappField = document.querySelector(".range__wrapp-field");
 var formatValues = [
   document.getElementById("min-price"),
   document.getElementById("max-price")
 ];
-var valueElemMin = document.querySelector("#min-price");
-var valueElemMax = document.querySelector("#max-price");
 noUiSlider.create(sliderElement, {
   start: [0, 900],
   range: {
@@ -24,12 +21,8 @@ noUiSlider.create(sliderElement, {
   },
   connect: [false, true, false],
   format: {
-    from: (value) => {
-      return Number(value).toFixed(0);
-    },
-    to: (value) => {
-      return Number(value).toFixed(0);
-    }
+    from: (value) => Number(value).toFixed(0),
+    to: (value) => Number(value).toFixed(0)
   }
 });
 sliderElement.noUiSlider.on("update", function(values, handle) {
@@ -37,14 +30,11 @@ sliderElement.noUiSlider.on("update", function(values, handle) {
 });
 formatValues.forEach((button) => {
   button.addEventListener("input", () => {
-    console.log(button.id);
     if (button.id === "min-price") {
       sliderElement.noUiSlider.set([button.value, null]);
-      console.log(button.id);
     }
     if (button.id === "max-price") {
       sliderElement.noUiSlider.set([null, button.value]);
-      console.log(button.id);
     }
   });
 });
@@ -74,18 +64,15 @@ var btnDisabled = () => {
   let fl;
   if (currentSlide === 0) {
     fl = true;
-    console.log("\u043D\u0430\u0447\u0430\u043B\u043E");
     prevButton.disabled = fl;
     return;
   }
   if (currentSlide === slideCount - 1) {
     fl = true;
-    console.log("\u043A\u043E\u043D\u0435\u0446");
     nextButton.disabled = fl;
     return;
   } else {
     fl = false;
-    console.log("\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0430");
     nextButton.disabled = fl;
     prevButton.disabled = fl;
     return;

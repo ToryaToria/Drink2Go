@@ -27,22 +27,22 @@
   }
 }
 
-.control__input[type="radio"]:not(:disabled):hover + .control__mark-radio,
-.control__input[type="radio"]:not(:disabled):focus + .control__mark-radio {
-  border-color: $color-base-light;
-
-  &::before {
-    display: block;
-    background-color: $color-base-025;
-  }
-}
-
 .control__input[type="radio"]:not(:disabled):checked + .control__mark-radio {
   border-color: $color-base;
 
   &::before {
     display: block;
     background-color: $color-base;
+  }
+}
+
+.control__input[type="radio"]:not(:disabled):focus-visible + .control__mark-radio,
+.control__input[type="radio"]:not(:disabled):hover + .control__mark-radio {
+  border-color: $color-base-light;
+
+  &::before {
+    display: block;
+    background-color: $color-base-025;
   }
 }
 
@@ -54,7 +54,6 @@
 .control__input[type="radio"]:disabled:checked + .control__mark-radio {
   border-color: $color-grey-light;
   cursor: no-drop;
-
 
   &::before {
     display: block;

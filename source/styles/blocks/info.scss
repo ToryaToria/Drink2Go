@@ -2,7 +2,7 @@
   @include list-reset;
 
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 27px;
 
   @include media-tablet {
@@ -58,8 +58,33 @@
 }
 
 .info__link {
-  &:hover,
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    color: $color-base-light;
+  }
+
+  &:active {
+    color: $color-base-dark;
+  }
+}
+
+.info__phone {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     color: $color-base-light;
   }
 

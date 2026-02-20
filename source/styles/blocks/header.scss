@@ -9,7 +9,9 @@
   text-decoration: none;
   margin-right: 88px;
   padding-top: 4px;
-  cursor: default;
+
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 
   @include media-tablet {
     margin-right: 67px;
@@ -18,6 +20,19 @@
   @include media-desktop {
     margin-right: 0;
     width: 316px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

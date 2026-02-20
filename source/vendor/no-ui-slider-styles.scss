@@ -67,8 +67,16 @@
   display: none;
 }
 
-.noUi-handle:hover,
-.noUi-handle:focus {
+.noUi-handle {
+    transition: background-color 0.9s ease-in-out;
+}
+
+.noUi-handle:focus-visible {
+  outline: none;
+}
+
+.noUi-handle:focus-visible,
+.noUi-handle:hover {
   &::before {
     background-color: $color-base-025;
   }

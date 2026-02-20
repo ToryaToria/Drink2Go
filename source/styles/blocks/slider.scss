@@ -5,7 +5,8 @@
 .slider__wrapp {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  height: 100%;
 
   @include media-desktop {
     flex-direction: row;
@@ -16,6 +17,8 @@
 .slider__img {
   width: 280px;
   height: 280px;
+  display: block;
+  margin: 0 auto;
 
   @include media-tablet {
     width: 476px;
@@ -37,6 +40,7 @@
 
 .slider__list {
   @include list-reset;
+  // display: flex;
 }
 
 .slider__item {
@@ -125,18 +129,22 @@
 }
 
 .slider__text {
-  margin-bottom: 20px;
   padding-left: 21px;
   padding-right: 21px;
+
+  max-width: 500px;
+  margin: 0 auto 20px;
 
   @include media-tablet {
     padding-left: 0;
     padding-right: 0;
+    max-width: 648px;
   }
 
   @include media-desktop {
     margin-bottom: 40px;
     text-align: left;
+    max-width: 100%;
   }
 }
 
@@ -165,8 +173,14 @@
   border: none;
   cursor: pointer;
 
-  &:not(:disabled):hover,
+  transition: 0.3s ease-in-out;
+
   &:not(:disabled):focus {
+    outline: none;
+  }
+
+  &:not(:disabled):focus-visible,
+  &:not(:disabled):hover {
     background: linear-gradient(to right, $color-white, transparent);
   }
 
@@ -217,6 +231,7 @@
 }
 
 .slider__dots {
+  box-sizing: border-box;
   border: none;
   padding: 0;
   width: 62px;
@@ -224,9 +239,16 @@
   margin-top: 8px;
   margin-bottom: 10px;
   background-color: $color-white;
+  cursor: pointer;
 
-  &:hover,
+  transition: background-color 0.3s ease-in-out;
+
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     background-color: $color-base-025;
   }
 

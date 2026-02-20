@@ -7,22 +7,8 @@
   border-radius: 4px;
   user-select: none;
 
-  &--second {
-    color: $color-base;
-    background-color: $color-white;
-
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:disabled {
-      color: $color-white;
-    }
-
-    &:disabled {
-      background-color: $color-grey-light;
-    }
-  }
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   &--img {
     display: flex;
@@ -35,8 +21,13 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
     background-color: $color-base-light;
   }
 
@@ -46,5 +37,21 @@
 
   &:disabled {
     background-color: $color-grey;
+  }
+}
+
+.button--second {
+  color: $color-base;
+  background-color: $color-white;
+  transition: 0.3s ease-in-out;
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-grey-light;
   }
 }
